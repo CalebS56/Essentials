@@ -319,8 +319,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.31, y: 1, z: 1}
-  m_Center: {x: 5.47, y: -4.02, z: 0}
+  m_Size: {x: 6.31, y: 0.88, z: 1}
+  m_Center: {x: 5.47, y: -4.1, z: 0}
 --- !u!1 &46336720
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bcb85d05bbdb8a2468fe865da75a2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1014,7 +1014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bcb85d05bbdb8a2468fe865da75a2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1236,8 +1236,8 @@ GameObject:
   m_Component:
   - component: {fileID: 624031789}
   - component: {fileID: 624031788}
-  - component: {fileID: 624031787}
   - component: {fileID: 624031792}
+  - component: {fileID: 624031787}
   - component: {fileID: 624031791}
   - component: {fileID: 624031790}
   m_Layer: 6
@@ -1438,8 +1438,8 @@ GameObject:
   m_Component:
   - component: {fileID: 731839848}
   - component: {fileID: 731839847}
-  - component: {fileID: 731839846}
   - component: {fileID: 731839851}
+  - component: {fileID: 731839846}
   - component: {fileID: 731839850}
   - component: {fileID: 731839849}
   m_Layer: 6
@@ -1660,7 +1660,7 @@ Transform:
   m_GameObject: {fileID: 786084289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.27388, y: -3.3927197, z: 0}
+  m_LocalPosition: {x: 3.27388, y: -3.48, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1786,7 +1786,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -1955,7 +1955,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2073,7 +2073,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2537,7 +2537,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -6753,7 +6753,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bcb85d05bbdb8a2468fe865da75a2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6810,7 +6810,7 @@ Transform:
   m_GameObject: {fileID: 966965934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.83388, y: -3.3927197, z: 0}
+  m_LocalPosition: {x: 4.83388, y: -3.48, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6836,7 +6836,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16, y: 0.08, z: 0.2}
-  m_Center: {x: 0, y: -0.04, z: 0}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!212 &966965937
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6936,7 +6936,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -7105,7 +7105,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7223,7 +7223,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7687,7 +7687,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -12057,7 +12057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 4
+  jumpForce: 3
   gravity: -9.81
 --- !u!143 &1063144071
 CharacterController:
@@ -12705,7 +12705,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bcb85d05bbdb8a2468fe865da75a2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13129,7 +13129,7 @@ Transform:
   m_GameObject: {fileID: 1640497530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.83388, y: -3.3927197, z: 0}
+  m_LocalPosition: {x: 7.83388, y: -3.48, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13155,7 +13155,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16, y: 0.08, z: 0.2}
-  m_Center: {x: 0, y: -0.04, z: 0}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!212 &1640497533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13255,7 +13255,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -13424,7 +13424,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -13542,7 +13542,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14006,7 +14006,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -18071,7 +18071,7 @@ Transform:
   m_GameObject: {fileID: 1662007384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.30388, y: -3.3927197, z: 0}
+  m_LocalPosition: {x: 6.30388, y: -3.48, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18097,7 +18097,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16, y: 0.08, z: 0.2}
-  m_Center: {x: 0, y: -0.04, z: 0}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!212 &1662007387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18197,7 +18197,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -18366,7 +18366,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -18484,7 +18484,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -18948,7 +18948,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -23102,8 +23102,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1819713338}
   - component: {fileID: 1819713337}
-  - component: {fileID: 1819713336}
   - component: {fileID: 1819713341}
+  - component: {fileID: 1819713336}
   - component: {fileID: 1819713340}
   - component: {fileID: 1819713339}
   m_Layer: 6
@@ -24043,7 +24043,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 86d048c9e2620f74690aa9ea1328dab8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
