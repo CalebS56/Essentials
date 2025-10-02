@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: NightStand and Tote.ma
-//Last modified: Wed, Oct 01, 2025 02:41:17 PM
+//Last modified: Wed, Oct 01, 2025 08:41:50 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "polyBoolean" "polyBoolean" "1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "6885E45B-4685-2E49-C4AB-EA9EF3BC0A62";
+fileInfo "UUID" "78D4DD18-47BE-7611-BA01-BB9E8D2B321E";
 createNode transform -s -n "persp";
 	rename -uid "45F3AA2A-4972-7AFF-2A0A-72A470725D38";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.2521429028020323 5.8492296667449537 20.972396380723403 ;
-	setAttr ".r" -type "double3" -6.9383527347061822 2176.5999999998912 -2.0742980796659684e-16 ;
+	setAttr ".t" -type "double3" 8.5794159154337528 5.1605072507558347 20.211837281831667 ;
+	setAttr ".r" -type "double3" -5.13835273473941 2182.9999999999281 2.1595178650694005e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B72DA1DD-4A95-C1E8-4A4A-69BAF5D94DEF";
 	setAttr -k off ".v" no;
