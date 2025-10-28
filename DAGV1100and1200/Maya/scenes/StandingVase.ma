@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Unit4_CurvesLab.ma
-//Last modified: Tue, Oct 28, 2025 02:42:25 PM
+//Name: StandingVase.ma
+//Last modified: Tue, Oct 28, 2025 02:45:08 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "3F2BDE49-4202-6250-476A-57998F809B6A";
+fileInfo "UUID" "F73286D4-4C02-E27F-09F9-8C8AB284C975";
 createNode transform -n "Unit4_CurvesLab:StandingVase";
 	rename -uid "A148352B-48CF-ED5E-9808-A4A81530ED76";
 	setAttr ".rp" -type "double3" 0 0 1.7763568394002505e-15 ;
 	setAttr ".sp" -type "double3" 0 0 1.7763568394002505e-15 ;
-createNode mesh -n "Unit4_CurvesLab:StandingVaseShape" -p "Unit4_CurvesLab:StandingVase";
+createNode mesh -n "StandingVase" -p "Unit4_CurvesLab:StandingVase";
 	rename -uid "C6752430-4672-D715-BEA2-7B9B9E6D8D7A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1405,20 +1405,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D4D1A9DA-4795-3D68-83B3-C5868BD451AE";
+	rename -uid "4FAA865E-43AC-F43F-2091-DB87DB667131";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2855911B-4FDB-6B24-B320-2D9EFA509875";
+	rename -uid "61379BF5-4BE5-F2FC-EA0A-E48DEDFAE8EF";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "88419B9A-43FA-CF62-CE2C-399312463D45";
+	rename -uid "F645F943-47F8-6AB2-CEA8-1CB8859F795F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "18B9E820-4507-B41D-281E-0ABF97052282";
+	rename -uid "4F28AB77-434A-9057-4EB6-81A556E16C0D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8572CD8F-485E-A3A0-E592-5F9961DC7F63";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BB7C047A-41F5-3F91-B53D-4C9A37B7281B";
+	rename -uid "554FBC43-487F-DE1E-BADF-BFB367322AD7";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "65D4EC9C-42A4-F44B-82DA-F983B7036851";
 	setAttr ".g" yes;
@@ -1523,8 +1523,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1557,7 +1555,6 @@ connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file1.oc" ":standardSurface1.bc";
-connectAttr "Unit4_CurvesLab:StandingVaseShape.iog" ":initialShadingGroup.dsm" -na
-		;
+connectAttr "StandingVase.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "file1.msg" ":initialMaterialInfo.t" -na;
-// End of Unit4_CurvesLab.ma
+// End of StandingVase.ma
