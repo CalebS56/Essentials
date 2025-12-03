@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main.ma
-//Last modified: Sat, Nov 29, 2025 05:04:07 PM
+//Last modified: Wed, Dec 03, 2025 02:33:58 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,23 +12,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "BDC3257F-4C4D-F821-12D5-579FD87859D3";
+fileInfo "UUID" "DD7A1B65-4C28-1F9D-E176-CA9E554F2D2A";
 createNode transform -s -n "persp";
 	rename -uid "18D2601A-42D2-EC3D-FF5D-479FD5D20AD2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -165.97930563018548 69.874384811980789 -12.188758291874796 ;
-	setAttr ".r" -type "double3" -18.938352741193654 -814.1999999996666 -2.5444437451708134e-14 ;
+	setAttr ".t" -type "double3" -35.826568826020036 49.57737772710864 17.120264454987325 ;
+	setAttr ".r" -type "double3" -15.338352731540649 -1876.5999999990879 0 ;
 	setAttr ".rp" -type "double3" -1.1102230246251565e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 6.4956700860351673e-17 3.4635881274755796e-18 1.2784554747623769e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6A2D3D80-430F-46DF-4309-0FB755C218A6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 175.95075672178328;
+	setAttr ".coi" 76.603082121508521;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 12.769454510016702 0 ;
+	setAttr ".tp" -type "double3" 36.036786183847845 29.314434039554556 -1.6163991283235646e-06 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "06FC9A4D-4AB3-35B7-6A53-4F94EE060021";
@@ -82,9 +82,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "PropTable";
 	rename -uid "B3D0D0EB-44EB-55E9-73DD-08A8B810B8E7";
-	setAttr ".s" -type "double3" 2.5203153540965553 2.5203153540965553 2.5203153540965553 ;
-	setAttr ".rp" -type "double3" 0 4.4408920985006262e-16 0 ;
-	setAttr ".sp" -type "double3" 0 4.4408920985006262e-16 0 ;
+	setAttr ".t" -type "double3" 0 0.15764904022216619 0 ;
+	setAttr ".s" -type "double3" 1.5802351191251822 1.5802351191251822 1.5802351191251822 ;
+	setAttr ".rp" -type "double3" 0 -0.15764904022216425 0 ;
+	setAttr ".sp" -type "double3" 0 -0.062551315241531208 0 ;
+	setAttr ".spt" -type "double3" 0 -0.095097724980633805 0 ;
 createNode mesh -n "PropTableShape" -p "PropTable";
 	rename -uid "004F37D7-46B0-FC5F-E0BC-FB915B936DC9";
 	setAttr -k off ".v";
@@ -1442,13 +1444,13 @@ createNode mesh -n "PropTableShape" -p "PropTable";
 		656 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "SilverVase:SilverVase";
+createNode transform -n "SilverVase1";
 	rename -uid "A122D32C-4655-7E4F-6289-B1B4398EDB44";
-	setAttr ".t" -type "double3" 0 8.1827073097229004 0 ;
-	setAttr ".s" -type "double3" 2.4058222054480209 2.4058222054480209 2.4058222054480209 ;
+	setAttr ".t" -type "double3" 0 3.2218127250671387 0 ;
+	setAttr ".s" -type "double3" 1.5084480333942014 1.5084480333942014 1.5084480333942014 ;
 	setAttr ".rp" -type "double3" -0.028960227966308379 5.3822426795959473 -1.9428902930940239e-16 ;
 	setAttr ".sp" -type "double3" -0.028960227966307921 5.3822426795959304 3.6082248300317588e-15 ;
-createNode mesh -n "SilverVase:SilverVaseShape" -p "SilverVase:SilverVase";
+createNode mesh -n "SilverVase1Shape" -p "SilverVase1";
 	rename -uid "D2EFF658-4F32-912B-6854-5980C2D859C6";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:6047]";
@@ -22579,8 +22581,8 @@ createNode mesh -n "SilverVase:SilverVaseShape" -p "SilverVase:SilverVase";
 	setAttr ".dsm" 2;
 createNode transform -n "Flower1";
 	rename -uid "CFBB8691-49B8-3B98-8E21-DDAEEA934690";
-	setAttr ".t" -type "double3" 0 9.0859392611083116 0 ;
-	setAttr ".s" -type "double3" 2.4058222054480209 2.4058222054480209 2.4058222054480209 ;
+	setAttr ".t" -type "double3" 0 3.5214961507206795 0 ;
+	setAttr ".s" -type "double3" 1.5084480333942014 1.5084480333942014 1.5084480333942014 ;
 	setAttr ".rp" -type "double3" -0.015527409906179068 6.0575586772146881 -0.21132692019548649 ;
 	setAttr ".sp" -type "double3" -0.015527409906179068 6.0575586772146881 -0.21132692019548649 ;
 createNode mesh -n "Flower1" -p "|Flower1";
@@ -24937,8 +24939,8 @@ createNode mesh -n "Flower1" -p "|Flower1";
 	setAttr ".dr" 1;
 createNode transform -n "Flower2";
 	rename -uid "BD7C0865-4BBA-246F-2EC5-EAA4F1B15FFA";
-	setAttr ".t" -type "double3" 0 9.0598446086691045 0 ;
-	setAttr ".s" -type "double3" 2.4058222054480209 2.4058222054480209 2.4058222054480209 ;
+	setAttr ".t" -type "double3" 0 3.4954014982814723 0 ;
+	setAttr ".s" -type "double3" 1.5084480333942014 1.5084480333942014 1.5084480333942014 ;
 	setAttr ".rp" -type "double3" -0.25228590106506432 6.0803808367268566 -0.25418162012217593 ;
 	setAttr ".sp" -type "double3" -0.25228590106506432 6.0803808367268566 -0.25418162012217593 ;
 createNode mesh -n "Flower2" -p "|Flower2";
@@ -27293,10 +27295,10 @@ createNode mesh -n "Flower2" -p "|Flower2";
 	setAttr ".dfgi" 214;
 	setAttr ".bw" 3;
 	setAttr ".dr" 1;
-createNode transform -n "pPlane1";
+createNode transform -n "MansionFloor";
 	rename -uid "382DA6F3-40EA-9E92-6A84-6E8C1E260C79";
 	setAttr ".s" -type "double3" 205.26139142368859 56.738338097957865 93.632171237253431 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
+createNode mesh -n "MansionFloorShape" -p "MansionFloor";
 	rename -uid "A831674A-43AE-7D2F-0AC1-A0BA95CD840A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -27307,7 +27309,7 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 51 ".pt";
+	setAttr -s 20 ".pt";
 	setAttr ".pt[90]" -type "float3" 0 0 3.7252903e-09 ;
 	setAttr ".pt[91]" -type "float3" -0.028051808 0.010130842 0.052024931 ;
 	setAttr ".pt[92]" -type "float3" 0 0.010130842 0.052025091 ;
@@ -27328,22 +27330,219 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".pt[349]" -type "float3" 0 0 -0.05202492 ;
 	setAttr ".pt[350]" -type "float3" -0.02805179 0 0 ;
 	setAttr ".pt[352]" -type "float3" 0 0 -0.05202492 ;
+createNode transform -n "Wall1";
+	rename -uid "53F65B33-480A-83DF-2171-4E926F346D01";
+	setAttr ".t" -type "double3" 35.760388964457221 0.49999998804088541 -46.994993879844948 ;
+	setAttr ".s" -type "double3" 116.12623342670722 1 0.10635529410086562 ;
+	setAttr ".rp" -type "double3" 0 -0.49999998804088541 0.17890806441525842 ;
+	setAttr ".sp" -type "double3" 0 -0.49999998804088541 1.6821735667016284 ;
+	setAttr ".spt" -type "double3" 0 0 -1.5032655022863746 ;
+createNode mesh -n "WallShape1" -p "Wall1";
+	rename -uid "AF6A403A-4969-08A2-BC56-A6BEC3ABBAD6";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.94991579651832581 0.81736642122268677 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt[0:15]" -type "float3"  -0.073079802 0 0 0.07784012 
+		0 0 -0.073079802 -18.462309 2.8421709e-14 0.07784012 -18.462309 2.8421709e-14 -0.073079802 
+		-18.462309 2.8421709e-14 0.07784012 -18.462309 2.8421709e-14 -0.073079802 0 0 0.07784012 
+		0 0 -0.073079802 0 0 -0.073079802 0 0 0.07784012 0 0 0.07784012 0 0 -0.073079802 
+		0 0 0.07784012 0 0 0.07784012 0 0 -0.073079802 0 0;
+createNode transform -n "Wall2";
+	rename -uid "C9C2030F-464C-0D45-BE2D-C898D1C79383";
+	setAttr ".t" -type "double3" 35.760388964457277 0.49999998804088541 46.637177751014448 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 116.12623342670722 1 0.10635529410086562 ;
+	setAttr ".rp" -type "double3" 0 -0.49999998804088541 0.17890806441525842 ;
+	setAttr ".sp" -type "double3" 0 -0.49999998804088541 1.6821735667016284 ;
+	setAttr ".spt" -type "double3" 0 0 -1.5032655022863746 ;
+createNode mesh -n "WallShape2" -p "Wall2";
+	rename -uid "DD875BC4-4944-D1D7-8738-BBA0EC581D6F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[7]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "f[0]" "f[9:13]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5:6]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[4]" "f[8]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.84602987766265869 0.85629799962043762 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.77199471 0.93433523
+		 0.84924209 0.93455154 0.91997147 0.81755608 0.97985983 0.81711704 0.91997188 0.81761581
+		 0.97986013 0.81717658 0.92031544 0.86088049 0.98013526 0.86040896 0.92031586 0.8609401
+		 0.98013574 0.86046869 0.8493132 0.93453121 0.97991449 0.8171159 0.77192366 0.93432164
+		 0.91991663 0.81755459 0.77197254 0.93813509 0.92010379 0.77446091 0.9203127 0.8604933
+		 0.98013258 0.86002195 0.97955078 0.77448785 0.84927326 0.93835413 0.772035 0.93483883
+		 0.849204 0.9350639 0.84923333 0.93761033 0.772012 0.93738955 0.9203127 0.8604933
+		 0.98013258 0.86002195 0.77190125 0.93811607 0.92015851 0.77446324 0.84934449 0.93833554
+		 0.97949612 0.77449018;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt[0:15]" -type "float3"  -0.077840045 0 -1.110223e-16 
+		0.073079832 0 -1.1657342e-15 -0.077840045 -18.462309 2.8310687e-14 0.073079832 -18.462309 
+		2.7255975e-14 -0.077840045 -18.462309 2.8588243e-14 0.073079832 -18.462309 2.7533531e-14 
+		-0.077840045 0 1.6653345e-16 0.073079832 0 -8.8817842e-16 -0.077840045 0 -1.110223e-16 
+		-0.077840045 0 1.6653345e-16 0.073079832 0 -8.8817842e-16 0.073079832 0 -1.1657342e-15 
+		-0.077840045 0 2.220446e-16 0.073079832 0 -1.110223e-15 0.073079832 0 -1.110223e-15 
+		-0.077840045 0 2.220446e-16;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 76.59117889 0.5
+		 0.5 76.59117889 0.5 -0.5 76.59117889 -0.5 0.5 76.59117889 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5
+		 -0.5 0.19006824 0.5 -0.5 0.19006824 -0.5 0.5 0.19006824 -0.5 0.5 0.19006824 0.5 -0.5 -0.5 1.68218994
+		 0.5 -0.5 1.68218994 0.5 0.059381813 1.57041085 -0.5 0.059381813 1.57041085;
+	setAttr -s 28 ".ed[0:27]"  0 1 1 2 3 0 4 5 0 6 7 0 0 8 1 1 11 1 2 4 0
+		 3 5 0 4 9 0 5 10 0 6 0 0 7 1 0 8 2 0 9 6 0 8 9 1 10 7 0 9 10 1 11 3 0 10 11 1 11 8 0
+		 0 12 0 1 13 0 12 13 0 11 14 0 13 14 0 8 15 0 14 15 0 12 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 22 24 26 -28
+		mu 0 4 20 21 22 23
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 16 15 -4 -14
+		mu 0 4 24 25 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -16 18 -6
+		mu 0 4 1 10 28 19
+		f 4 10 4 14 13
+		mu 0 4 12 0 14 26
+		f 4 -15 12 6 8
+		mu 0 4 15 27 2 13
+		f 4 2 9 -17 -9
+		mu 0 4 4 5 17 16
+		f 4 -19 -10 -8 -18
+		mu 0 4 29 18 11 3
+		f 4 -20 17 -2 -13
+		mu 0 4 27 29 3 2
+		f 4 0 21 -23 -21
+		mu 0 4 0 1 21 20
+		f 4 5 23 -25 -22
+		mu 0 4 1 19 22 21
+		f 4 19 25 -27 -24
+		mu 0 4 19 14 23 22
+		f 4 -5 20 27 -26
+		mu 0 4 14 0 20 23;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Wall3";
+	rename -uid "9E390669-4C8B-0CBD-56D7-A9875F91970D";
+	setAttr ".t" -type "double3" 102.63069915771487 0.49999998804088552 -2.4051016977997874 ;
+	setAttr ".r" -type "double3" 0 -90 0 ;
+	setAttr ".s" -type "double3" 43.991185881039378 1 0.10635529410086562 ;
+	setAttr ".rp" -type "double3" 0 -0.49999998804088541 0.17890806441525842 ;
+	setAttr ".sp" -type "double3" 0 -0.49999998804088541 1.6821735667016284 ;
+	setAttr ".spt" -type "double3" 0 0 -1.5032655022863746 ;
+createNode mesh -n "WallShape3" -p "Wall3";
+	rename -uid "3FB5ECA4-4C82-894F-DCA7-5B8F1F0C95AD";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[7]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "f[0]" "f[9:13]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5:6]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[4]" "f[8]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.94991579651832581 0.81736642122268677 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.77199471 0.93433523
+		 0.84924209 0.93455154 0.91997147 0.81755608 0.97985983 0.81711704 0.91997188 0.81761581
+		 0.97986013 0.81717658 0.92031544 0.86088049 0.98013526 0.86040896 0.92031586 0.8609401
+		 0.98013574 0.86046869 0.8493132 0.93453121 0.97991449 0.8171159 0.77192366 0.93432164
+		 0.91991663 0.81755459 0.77197254 0.93813509 0.92010379 0.77446091 0.9203127 0.8604933
+		 0.98013258 0.86002195 0.97955078 0.77448785 0.84927326 0.93835413 0.772035 0.93483883
+		 0.849204 0.9350639 0.84923333 0.93761033 0.772012 0.93738955 0.9203127 0.8604933
+		 0.98013258 0.86002195 0.77190125 0.93811607 0.92015851 0.77446324 0.84934449 0.93833554
+		 0.97949612 0.77449018;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt[0:15]" -type "float3"  -0.51888549 0 0 0.6148206 
+		0 0 -0.51888549 -18.462309 2.8421709e-14 0.6148206 -18.462309 2.8421709e-14 -0.51888549 
+		-18.462309 2.8421709e-14 0.6148206 -18.462309 2.8421709e-14 -0.51888549 0 0 0.6148206 
+		0 0 -0.51888549 0 0 -0.51888549 0 0 0.6148206 0 0 0.6148206 0 0 -0.51888549 0 0 0.6148206 
+		0 0 0.6148206 0 0 -0.51888549 0 0;
+	setAttr -s 16 ".vt[0:15]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 76.59117889 0.5
+		 0.5 76.59117889 0.5 -0.5 76.59117889 -0.5 0.5 76.59117889 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5
+		 -0.5 0.19006824 0.5 -0.5 0.19006824 -0.5 0.5 0.19006824 -0.5 0.5 0.19006824 0.5 -0.5 -0.5 1.68218994
+		 0.5 -0.5 1.68218994 0.5 0.059381813 1.57041085 -0.5 0.059381813 1.57041085;
+	setAttr -s 28 ".ed[0:27]"  0 1 1 2 3 0 4 5 0 6 7 0 0 8 1 1 11 1 2 4 0
+		 3 5 0 4 9 0 5 10 0 6 0 0 7 1 0 8 2 0 9 6 0 8 9 1 10 7 0 9 10 1 11 3 0 10 11 1 11 8 0
+		 0 12 0 1 13 0 12 13 0 11 14 0 13 14 0 8 15 0 14 15 0 12 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 22 24 26 -28
+		mu 0 4 20 21 22 23
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 16 15 -4 -14
+		mu 0 4 24 25 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -16 18 -6
+		mu 0 4 1 10 28 19
+		f 4 10 4 14 13
+		mu 0 4 12 0 14 26
+		f 4 -15 12 6 8
+		mu 0 4 15 27 2 13
+		f 4 2 9 -17 -9
+		mu 0 4 4 5 17 16
+		f 4 -19 -10 -8 -18
+		mu 0 4 29 18 11 3
+		f 4 -20 17 -2 -13
+		mu 0 4 27 29 3 2
+		f 4 0 21 -23 -21
+		mu 0 4 0 1 21 20
+		f 4 5 23 -25 -22
+		mu 0 4 1 19 22 21
+		f 4 19 25 -27 -24
+		mu 0 4 19 14 23 22
+		f 4 -5 20 27 -26
+		mu 0 4 14 0 20 23;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DE27225A-452E-3EF7-079F-79AAF3744AD4";
+	rename -uid "4C39ED95-4BA6-9F6F-7338-F687249E17FB";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "810A551C-4129-FDCC-AE2C-4B8F3D6C7DF1";
+	rename -uid "37523D31-4E51-24C5-B96A-FA80CA2477C4";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6F3E01AB-4B7B-BBFB-0FE6-76B1FFB7F1D3";
+	rename -uid "65560500-4992-52A5-43D1-338BF032137F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1316DC3D-424E-E61F-5398-C1AE37D0E5BB";
+	rename -uid "6CBADD89-46F6-3DD4-8D0A-64955CBCE9EE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "98B935C2-4CC0-786C-0988-5787EA5E21C4";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "64527E03-4C7D-9120-3CB8-32ABBA87A11B";
+	rename -uid "23624ACE-48D9-2B2D-262B-D6B6D4E4B468";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1F7323F3-4754-8552-8957-D69144578CAD";
 	setAttr ".g" yes;
@@ -27353,17 +27552,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 169\n            -height 288\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 168\n            -height 288\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 169\n            -height 288\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 391\n            -height 643\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 583\n            -height 643\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -27390,8 +27589,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 391\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 391\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 583\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 583\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -30588,30 +30787,12 @@ createNode polySplitRing -n "polySplitRing2";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "7621D4DD-4B5B-1672-B59E-AB8D63F670A5";
 	setAttr ".uopa" yes;
-	setAttr -s 25 ".tk";
-	setAttr ".tk[271]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[272]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[273]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[274]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[275]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[276]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[277]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[278]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[279]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[280]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[281]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[282]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[283]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[284]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[285]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[286]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[287]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[288]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[289]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[290]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[291]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[292]" -type "float3" 0 0 0.0053952541 ;
-	setAttr ".tk[293]" -type "float3" 0 0 0.0053952541 ;
+	setAttr -s 23 ".tk[271:293]" -type "float3"  0 0 0.0053952541 0 0 0.0053952541
+		 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541
+		 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541
+		 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541
+		 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541 0 0 0.0053952541
+		 0 0 0.0053952541;
 createNode polySplitRing -n "polySplitRing3";
 	rename -uid "E27568D8-4783-848D-CF0D-34B8B6524BA4";
 	setAttr ".uopa" yes;
@@ -30639,7 +30820,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace2";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "15D1C7C4-4745-1FDC-CD29-27A8C7BB15AC";
 	setAttr ".uopa" yes;
-	setAttr -s 53 ".tk";
+	setAttr -s 52 ".tk";
 	setAttr ".tk[221]" -type "float3" 0 -0.015336318 0 ;
 	setAttr ".tk[222]" -type "float3" 0 -0.015336318 0 ;
 	setAttr ".tk[230]" -type "float3" 0 -0.015336318 0 ;
@@ -30813,7 +30994,7 @@ createNode polyMapCut -n "polyMapCut1";
 createNode polyTweak -n "polyTweak3";
 	rename -uid "319FE707-467D-A76D-CA2A-94B279982085";
 	setAttr ".uopa" yes;
-	setAttr -s 30 ".tk";
+	setAttr -s 28 ".tk";
 	setAttr ".tk[271]" -type "float3" 0 0 -0.0715864 ;
 	setAttr ".tk[272]" -type "float3" 0 0 -0.0715864 ;
 	setAttr ".tk[273]" -type "float3" 0 0 -0.0715864 ;
@@ -31267,7 +31448,7 @@ createNode polyMapCut -n "polyMapCut5";
 createNode polyTweakUV -n "polyTweakUV4";
 	rename -uid "53FFCC19-497E-EDE8-BB80-A8A6E3FCCF65";
 	setAttr ".uopa" yes;
-	setAttr -s 88 ".uvtk";
+	setAttr -s 87 ".uvtk";
 	setAttr ".uvtk[126]" -type "float2" 0.081955567 -0.0026130159 ;
 	setAttr ".uvtk[127]" -type "float2" 0.07592769 -0.0035826233 ;
 	setAttr ".uvtk[128]" -type "float2" 0.074284568 -0.0057640565 ;
@@ -31706,6 +31887,96 @@ createNode polyTweakUV -n "polyTweakUV6";
 		 0.59472871 0.19208804 0.6633997 -0.13445807 0.84162486 0.63906914 -1.020848393 0.63708913
 		 -1.084366322 0.63643694 -0.96201634 0.4184505 -1.018760562 0.18068226 -0.85637212
 		 0.41810897 -0.95687485;
+createNode polyCube -n "polyCube1";
+	rename -uid "1A3E959E-400F-7269-2CC0-768E373E3F5F";
+	setAttr ".cuv" 4;
+createNode polySplitRing -n "polySplitRing4";
+	rename -uid "3789EB20-47E2-3E04-A92D-FAB94470EE1A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[4:5]" "e[8:9]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 0.10635529410086562 0 0 4.2015833735084147 -42.671965315391816 1;
+	setAttr ".wt" 0.69006806612014771;
+	setAttr ".dr" no;
+	setAttr ".re" 4;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace4";
+	rename -uid "EA01A097-4B20-2001-55A2-1D93BF901380";
+	setAttr ".ics" -type "componentList" 1 "f[0]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 0.10635529410086562 0 0 4.2015833735084147 -42.671965315391816 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0 4.0466175 -42.618786 ;
+	setAttr ".rs" 65417;
+	setAttr ".lt" -type "double3" 0 0 -0.8742644951330405 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".tk" 1;
+	setAttr ".cbn" -type "double3" -0.5 3.7015833735084147 -42.618787668341383 ;
+	setAttr ".cbx" -type "double3" 0.5 4.3916514396285624 -42.618787668341383 ;
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "3E7F4653-496D-C66E-84C2-29BB1B62C333";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.13763213 0.05692938 0.139054
+		 0.057145655 -0.13944539 0.16173428 0.14249694 0.15815836 -0.13944042 -0.087779224
+		 0.14249957 -0.091356188 -0.13638943 0.01462543 0.14494348 0.010784984 -0.13638565
+		 -0.23488855 0.14494723 -0.238729 -0.11046088 0.05712536 -0.1070171 0.15814921 0.11188355
+		 0.05691573 0.11006871 0.16172245 -0.13778362 -0.11178781 0.11173078 -0.11180682 -0.13641405
+		 0.18398911 0.14491892 0.18014866 -0.11024773 -0.11158739 0.13926661 -0.11156876 -0.13735726
+		 0.05743295 0.13879466 0.057658017 0.13899457 -0.11231257 -0.13751441 -0.11253335;
+createNode polyMapCut -n "polyMapCut8";
+	rename -uid "3752D3D1-42FF-1CC8-69B0-46B68F031155";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweak -n "polyTweak4";
+	rename -uid "92A70447-458F-2F01-1EC2-D78D3CFC057F";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk";
+	setAttr ".tk[2]" -type "float3" 0 76.091179 0 ;
+	setAttr ".tk[3]" -type "float3" 0 76.091179 0 ;
+	setAttr ".tk[4]" -type "float3" 0 76.091179 0 ;
+	setAttr ".tk[5]" -type "float3" 0 76.091179 0 ;
+	setAttr ".tk[14]" -type "float3" 0 -0.13068643 -0.11177908 ;
+	setAttr ".tk[15]" -type "float3" 0 -0.13068643 -0.11177908 ;
+createNode polyMapCut -n "polyMapCut9";
+	rename -uid "E1C48795-418C-BFF2-FF68-9B90098C4753";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyMapCut -n "polyMapCut10";
+	rename -uid "E1A0F46C-4132-CD44-4030-EFA8262B36A1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyMapCut -n "polyMapCut11";
+	rename -uid "8D3360F3-402E-D69F-8F8D-8F9CBB9976EB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[16]";
+createNode polyMapCut -n "polyMapCut12";
+	rename -uid "E123B0C2-4D2B-D16D-EA7F-32AB76535E18";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyMapCut -n "polyMapCut13";
+	rename -uid "2AE6092A-4759-EC19-756A-7AB2CC266F68";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[14]";
+createNode polyMapCut -n "polyMapCut14";
+	rename -uid "ED971832-4568-AA51-AACB-F0A8E1F8EFA2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyMapCut -n "polyMapCut15";
+	rename -uid "F5CB1294-463F-7844-5548-07802553D1F6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "DF4AD04E-4BEB-68C7-3A97-4388967A48F3";
+	setAttr ".uopa" yes;
+	setAttr -s 30 ".uvtk[0:29]" -type "float2" 0.53462684 0.87740588 0.085188091
+		 0.87740588 0.68441683 0.4058218 0.21236289 0.40895867 0.6844123 0.40539503 0.21236056
+		 0.4085328 0.68170488 0.096255079 0.21019177 0.099624 0.68170154 0.095828637 0.21018849
+		 0.099197708 0.084774077 0.87740588 0.21193159 0.40896666 0.53504014 0.87740588 0.68484795
+		 0.40583217 0.53475618 0.87740588 0.68337303 0.71375072 0.68172675 0.099021189 0.21021365
+		 0.10239026 0.21479851 0.7135582 0.085006654 0.87740588 0.5343923 0.87740588 0.085409343
+		 0.87740588 0.085238755 0.87740588 0.53452641 0.87740588 0.68172675 0.099021189 0.21021365
+		 0.10239026 0.53517044 0.87740588 0.68294215 0.71373403 0.084592223 0.87740588 0.21522951
+		 0.71354192;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -31733,7 +32004,7 @@ select -ne :standardSurface1;
 select -ne :openPBR_shader1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 3 ".gn";
 select -ne :initialParticleSE;
@@ -31758,1251 +32029,1252 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "SilverVase:SilverVaseShape_pnts_3150__pntx.o" "SilverVase:SilverVaseShape.pt[3150].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3150__pntx.o" "SilverVase1Shape.pt[3150].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3150__pnty.o" "SilverVase:SilverVaseShape.pt[3150].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3150__pnty.o" "SilverVase1Shape.pt[3150].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3150__pntz.o" "SilverVase:SilverVaseShape.pt[3150].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3150__pntz.o" "SilverVase1Shape.pt[3150].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3151__pntx.o" "SilverVase:SilverVaseShape.pt[3151].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3151__pntx.o" "SilverVase1Shape.pt[3151].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3151__pnty.o" "SilverVase:SilverVaseShape.pt[3151].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3151__pnty.o" "SilverVase1Shape.pt[3151].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3151__pntz.o" "SilverVase:SilverVaseShape.pt[3151].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3151__pntz.o" "SilverVase1Shape.pt[3151].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3152__pntx.o" "SilverVase:SilverVaseShape.pt[3152].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3152__pntx.o" "SilverVase1Shape.pt[3152].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3152__pnty.o" "SilverVase:SilverVaseShape.pt[3152].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3152__pnty.o" "SilverVase1Shape.pt[3152].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3152__pntz.o" "SilverVase:SilverVaseShape.pt[3152].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3152__pntz.o" "SilverVase1Shape.pt[3152].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3153__pntx.o" "SilverVase:SilverVaseShape.pt[3153].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3153__pntx.o" "SilverVase1Shape.pt[3153].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3153__pnty.o" "SilverVase:SilverVaseShape.pt[3153].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3153__pnty.o" "SilverVase1Shape.pt[3153].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3153__pntz.o" "SilverVase:SilverVaseShape.pt[3153].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3153__pntz.o" "SilverVase1Shape.pt[3153].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3154__pntx.o" "SilverVase:SilverVaseShape.pt[3154].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3154__pntx.o" "SilverVase1Shape.pt[3154].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3154__pnty.o" "SilverVase:SilverVaseShape.pt[3154].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3154__pnty.o" "SilverVase1Shape.pt[3154].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3154__pntz.o" "SilverVase:SilverVaseShape.pt[3154].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3154__pntz.o" "SilverVase1Shape.pt[3154].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3155__pntx.o" "SilverVase:SilverVaseShape.pt[3155].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3155__pntx.o" "SilverVase1Shape.pt[3155].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3155__pnty.o" "SilverVase:SilverVaseShape.pt[3155].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3155__pnty.o" "SilverVase1Shape.pt[3155].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3155__pntz.o" "SilverVase:SilverVaseShape.pt[3155].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3155__pntz.o" "SilverVase1Shape.pt[3155].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3156__pntx.o" "SilverVase:SilverVaseShape.pt[3156].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3156__pntx.o" "SilverVase1Shape.pt[3156].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3156__pnty.o" "SilverVase:SilverVaseShape.pt[3156].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3156__pnty.o" "SilverVase1Shape.pt[3156].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3156__pntz.o" "SilverVase:SilverVaseShape.pt[3156].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3156__pntz.o" "SilverVase1Shape.pt[3156].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3157__pntx.o" "SilverVase:SilverVaseShape.pt[3157].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3157__pntx.o" "SilverVase1Shape.pt[3157].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3157__pnty.o" "SilverVase:SilverVaseShape.pt[3157].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3157__pnty.o" "SilverVase1Shape.pt[3157].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3157__pntz.o" "SilverVase:SilverVaseShape.pt[3157].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3157__pntz.o" "SilverVase1Shape.pt[3157].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3164__pntx.o" "SilverVase:SilverVaseShape.pt[3164].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3164__pntx.o" "SilverVase1Shape.pt[3164].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3164__pnty.o" "SilverVase:SilverVaseShape.pt[3164].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3164__pnty.o" "SilverVase1Shape.pt[3164].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3164__pntz.o" "SilverVase:SilverVaseShape.pt[3164].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3164__pntz.o" "SilverVase1Shape.pt[3164].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3165__pntx.o" "SilverVase:SilverVaseShape.pt[3165].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3165__pntx.o" "SilverVase1Shape.pt[3165].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3165__pnty.o" "SilverVase:SilverVaseShape.pt[3165].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3165__pnty.o" "SilverVase1Shape.pt[3165].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3165__pntz.o" "SilverVase:SilverVaseShape.pt[3165].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3165__pntz.o" "SilverVase1Shape.pt[3165].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3166__pntx.o" "SilverVase:SilverVaseShape.pt[3166].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3166__pntx.o" "SilverVase1Shape.pt[3166].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3166__pnty.o" "SilverVase:SilverVaseShape.pt[3166].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3166__pnty.o" "SilverVase1Shape.pt[3166].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3166__pntz.o" "SilverVase:SilverVaseShape.pt[3166].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3166__pntz.o" "SilverVase1Shape.pt[3166].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3167__pntx.o" "SilverVase:SilverVaseShape.pt[3167].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3167__pntx.o" "SilverVase1Shape.pt[3167].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3167__pnty.o" "SilverVase:SilverVaseShape.pt[3167].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3167__pnty.o" "SilverVase1Shape.pt[3167].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3167__pntz.o" "SilverVase:SilverVaseShape.pt[3167].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3167__pntz.o" "SilverVase1Shape.pt[3167].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3168__pntx.o" "SilverVase:SilverVaseShape.pt[3168].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3168__pntx.o" "SilverVase1Shape.pt[3168].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3168__pnty.o" "SilverVase:SilverVaseShape.pt[3168].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3168__pnty.o" "SilverVase1Shape.pt[3168].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3168__pntz.o" "SilverVase:SilverVaseShape.pt[3168].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3168__pntz.o" "SilverVase1Shape.pt[3168].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3169__pntx.o" "SilverVase:SilverVaseShape.pt[3169].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3169__pntx.o" "SilverVase1Shape.pt[3169].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3169__pnty.o" "SilverVase:SilverVaseShape.pt[3169].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3169__pnty.o" "SilverVase1Shape.pt[3169].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3169__pntz.o" "SilverVase:SilverVaseShape.pt[3169].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3169__pntz.o" "SilverVase1Shape.pt[3169].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3203__pntx.o" "SilverVase:SilverVaseShape.pt[3203].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3203__pntx.o" "SilverVase1Shape.pt[3203].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3203__pnty.o" "SilverVase:SilverVaseShape.pt[3203].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3203__pnty.o" "SilverVase1Shape.pt[3203].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3203__pntz.o" "SilverVase:SilverVaseShape.pt[3203].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3203__pntz.o" "SilverVase1Shape.pt[3203].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3204__pntx.o" "SilverVase:SilverVaseShape.pt[3204].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3204__pntx.o" "SilverVase1Shape.pt[3204].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3204__pnty.o" "SilverVase:SilverVaseShape.pt[3204].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3204__pnty.o" "SilverVase1Shape.pt[3204].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3204__pntz.o" "SilverVase:SilverVaseShape.pt[3204].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3204__pntz.o" "SilverVase1Shape.pt[3204].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3205__pntx.o" "SilverVase:SilverVaseShape.pt[3205].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3205__pntx.o" "SilverVase1Shape.pt[3205].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3205__pnty.o" "SilverVase:SilverVaseShape.pt[3205].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3205__pnty.o" "SilverVase1Shape.pt[3205].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3205__pntz.o" "SilverVase:SilverVaseShape.pt[3205].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3205__pntz.o" "SilverVase1Shape.pt[3205].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3206__pntx.o" "SilverVase:SilverVaseShape.pt[3206].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3206__pntx.o" "SilverVase1Shape.pt[3206].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3206__pnty.o" "SilverVase:SilverVaseShape.pt[3206].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3206__pnty.o" "SilverVase1Shape.pt[3206].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3206__pntz.o" "SilverVase:SilverVaseShape.pt[3206].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3206__pntz.o" "SilverVase1Shape.pt[3206].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3207__pntx.o" "SilverVase:SilverVaseShape.pt[3207].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3207__pntx.o" "SilverVase1Shape.pt[3207].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3207__pnty.o" "SilverVase:SilverVaseShape.pt[3207].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3207__pnty.o" "SilverVase1Shape.pt[3207].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3207__pntz.o" "SilverVase:SilverVaseShape.pt[3207].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3207__pntz.o" "SilverVase1Shape.pt[3207].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3208__pntx.o" "SilverVase:SilverVaseShape.pt[3208].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3208__pntx.o" "SilverVase1Shape.pt[3208].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3208__pnty.o" "SilverVase:SilverVaseShape.pt[3208].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3208__pnty.o" "SilverVase1Shape.pt[3208].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3208__pntz.o" "SilverVase:SilverVaseShape.pt[3208].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3208__pntz.o" "SilverVase1Shape.pt[3208].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3214__pntx.o" "SilverVase:SilverVaseShape.pt[3214].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3214__pntx.o" "SilverVase1Shape.pt[3214].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3214__pnty.o" "SilverVase:SilverVaseShape.pt[3214].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3214__pnty.o" "SilverVase1Shape.pt[3214].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3214__pntz.o" "SilverVase:SilverVaseShape.pt[3214].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3214__pntz.o" "SilverVase1Shape.pt[3214].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3215__pntx.o" "SilverVase:SilverVaseShape.pt[3215].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3215__pntx.o" "SilverVase1Shape.pt[3215].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3215__pnty.o" "SilverVase:SilverVaseShape.pt[3215].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3215__pnty.o" "SilverVase1Shape.pt[3215].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3215__pntz.o" "SilverVase:SilverVaseShape.pt[3215].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3215__pntz.o" "SilverVase1Shape.pt[3215].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3216__pntx.o" "SilverVase:SilverVaseShape.pt[3216].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3216__pntx.o" "SilverVase1Shape.pt[3216].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3216__pnty.o" "SilverVase:SilverVaseShape.pt[3216].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3216__pnty.o" "SilverVase1Shape.pt[3216].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3216__pntz.o" "SilverVase:SilverVaseShape.pt[3216].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3216__pntz.o" "SilverVase1Shape.pt[3216].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3217__pntx.o" "SilverVase:SilverVaseShape.pt[3217].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3217__pntx.o" "SilverVase1Shape.pt[3217].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3217__pnty.o" "SilverVase:SilverVaseShape.pt[3217].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3217__pnty.o" "SilverVase1Shape.pt[3217].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3217__pntz.o" "SilverVase:SilverVaseShape.pt[3217].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3217__pntz.o" "SilverVase1Shape.pt[3217].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3218__pntx.o" "SilverVase:SilverVaseShape.pt[3218].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3218__pntx.o" "SilverVase1Shape.pt[3218].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3218__pnty.o" "SilverVase:SilverVaseShape.pt[3218].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3218__pnty.o" "SilverVase1Shape.pt[3218].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3218__pntz.o" "SilverVase:SilverVaseShape.pt[3218].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3218__pntz.o" "SilverVase1Shape.pt[3218].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3219__pntx.o" "SilverVase:SilverVaseShape.pt[3219].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3219__pntx.o" "SilverVase1Shape.pt[3219].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3219__pnty.o" "SilverVase:SilverVaseShape.pt[3219].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3219__pnty.o" "SilverVase1Shape.pt[3219].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3219__pntz.o" "SilverVase:SilverVaseShape.pt[3219].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3219__pntz.o" "SilverVase1Shape.pt[3219].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3353__pntx.o" "SilverVase:SilverVaseShape.pt[3353].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3353__pntx.o" "SilverVase1Shape.pt[3353].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3353__pnty.o" "SilverVase:SilverVaseShape.pt[3353].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3353__pnty.o" "SilverVase1Shape.pt[3353].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3353__pntz.o" "SilverVase:SilverVaseShape.pt[3353].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3353__pntz.o" "SilverVase1Shape.pt[3353].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3354__pntx.o" "SilverVase:SilverVaseShape.pt[3354].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3354__pntx.o" "SilverVase1Shape.pt[3354].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3354__pnty.o" "SilverVase:SilverVaseShape.pt[3354].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3354__pnty.o" "SilverVase1Shape.pt[3354].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3354__pntz.o" "SilverVase:SilverVaseShape.pt[3354].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3354__pntz.o" "SilverVase1Shape.pt[3354].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3355__pntx.o" "SilverVase:SilverVaseShape.pt[3355].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3355__pntx.o" "SilverVase1Shape.pt[3355].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3355__pnty.o" "SilverVase:SilverVaseShape.pt[3355].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3355__pnty.o" "SilverVase1Shape.pt[3355].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3355__pntz.o" "SilverVase:SilverVaseShape.pt[3355].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3355__pntz.o" "SilverVase1Shape.pt[3355].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3356__pntx.o" "SilverVase:SilverVaseShape.pt[3356].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3356__pntx.o" "SilverVase1Shape.pt[3356].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3356__pnty.o" "SilverVase:SilverVaseShape.pt[3356].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3356__pnty.o" "SilverVase1Shape.pt[3356].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3356__pntz.o" "SilverVase:SilverVaseShape.pt[3356].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3356__pntz.o" "SilverVase1Shape.pt[3356].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3357__pntx.o" "SilverVase:SilverVaseShape.pt[3357].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3357__pntx.o" "SilverVase1Shape.pt[3357].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3357__pnty.o" "SilverVase:SilverVaseShape.pt[3357].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3357__pnty.o" "SilverVase1Shape.pt[3357].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3357__pntz.o" "SilverVase:SilverVaseShape.pt[3357].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3357__pntz.o" "SilverVase1Shape.pt[3357].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3358__pntx.o" "SilverVase:SilverVaseShape.pt[3358].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3358__pntx.o" "SilverVase1Shape.pt[3358].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3358__pnty.o" "SilverVase:SilverVaseShape.pt[3358].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3358__pnty.o" "SilverVase1Shape.pt[3358].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3358__pntz.o" "SilverVase:SilverVaseShape.pt[3358].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3358__pntz.o" "SilverVase1Shape.pt[3358].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3364__pntx.o" "SilverVase:SilverVaseShape.pt[3364].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3364__pntx.o" "SilverVase1Shape.pt[3364].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3364__pnty.o" "SilverVase:SilverVaseShape.pt[3364].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3364__pnty.o" "SilverVase1Shape.pt[3364].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3364__pntz.o" "SilverVase:SilverVaseShape.pt[3364].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3364__pntz.o" "SilverVase1Shape.pt[3364].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3365__pntx.o" "SilverVase:SilverVaseShape.pt[3365].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3365__pntx.o" "SilverVase1Shape.pt[3365].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3365__pnty.o" "SilverVase:SilverVaseShape.pt[3365].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3365__pnty.o" "SilverVase1Shape.pt[3365].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3365__pntz.o" "SilverVase:SilverVaseShape.pt[3365].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3365__pntz.o" "SilverVase1Shape.pt[3365].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3366__pntx.o" "SilverVase:SilverVaseShape.pt[3366].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3366__pntx.o" "SilverVase1Shape.pt[3366].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3366__pnty.o" "SilverVase:SilverVaseShape.pt[3366].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3366__pnty.o" "SilverVase1Shape.pt[3366].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3366__pntz.o" "SilverVase:SilverVaseShape.pt[3366].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3366__pntz.o" "SilverVase1Shape.pt[3366].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3367__pntx.o" "SilverVase:SilverVaseShape.pt[3367].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3367__pntx.o" "SilverVase1Shape.pt[3367].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3367__pnty.o" "SilverVase:SilverVaseShape.pt[3367].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3367__pnty.o" "SilverVase1Shape.pt[3367].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3367__pntz.o" "SilverVase:SilverVaseShape.pt[3367].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3367__pntz.o" "SilverVase1Shape.pt[3367].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3368__pntx.o" "SilverVase:SilverVaseShape.pt[3368].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3368__pntx.o" "SilverVase1Shape.pt[3368].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3368__pnty.o" "SilverVase:SilverVaseShape.pt[3368].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3368__pnty.o" "SilverVase1Shape.pt[3368].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3368__pntz.o" "SilverVase:SilverVaseShape.pt[3368].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3368__pntz.o" "SilverVase1Shape.pt[3368].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3369__pntx.o" "SilverVase:SilverVaseShape.pt[3369].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3369__pntx.o" "SilverVase1Shape.pt[3369].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3369__pnty.o" "SilverVase:SilverVaseShape.pt[3369].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3369__pnty.o" "SilverVase1Shape.pt[3369].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3369__pntz.o" "SilverVase:SilverVaseShape.pt[3369].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3369__pntz.o" "SilverVase1Shape.pt[3369].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3399__pntx.o" "SilverVase:SilverVaseShape.pt[3399].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3399__pntx.o" "SilverVase1Shape.pt[3399].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3399__pnty.o" "SilverVase:SilverVaseShape.pt[3399].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3399__pnty.o" "SilverVase1Shape.pt[3399].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3399__pntz.o" "SilverVase:SilverVaseShape.pt[3399].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3399__pntz.o" "SilverVase1Shape.pt[3399].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3400__pntx.o" "SilverVase:SilverVaseShape.pt[3400].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3400__pntx.o" "SilverVase1Shape.pt[3400].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3400__pnty.o" "SilverVase:SilverVaseShape.pt[3400].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3400__pnty.o" "SilverVase1Shape.pt[3400].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3400__pntz.o" "SilverVase:SilverVaseShape.pt[3400].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3400__pntz.o" "SilverVase1Shape.pt[3400].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3401__pntx.o" "SilverVase:SilverVaseShape.pt[3401].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3401__pntx.o" "SilverVase1Shape.pt[3401].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3401__pnty.o" "SilverVase:SilverVaseShape.pt[3401].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3401__pnty.o" "SilverVase1Shape.pt[3401].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3401__pntz.o" "SilverVase:SilverVaseShape.pt[3401].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3401__pntz.o" "SilverVase1Shape.pt[3401].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3402__pntx.o" "SilverVase:SilverVaseShape.pt[3402].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3402__pntx.o" "SilverVase1Shape.pt[3402].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3402__pnty.o" "SilverVase:SilverVaseShape.pt[3402].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3402__pnty.o" "SilverVase1Shape.pt[3402].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3402__pntz.o" "SilverVase:SilverVaseShape.pt[3402].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3402__pntz.o" "SilverVase1Shape.pt[3402].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3403__pntx.o" "SilverVase:SilverVaseShape.pt[3403].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3403__pntx.o" "SilverVase1Shape.pt[3403].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3403__pnty.o" "SilverVase:SilverVaseShape.pt[3403].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3403__pnty.o" "SilverVase1Shape.pt[3403].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3403__pntz.o" "SilverVase:SilverVaseShape.pt[3403].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3403__pntz.o" "SilverVase1Shape.pt[3403].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3404__pntx.o" "SilverVase:SilverVaseShape.pt[3404].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3404__pntx.o" "SilverVase1Shape.pt[3404].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3404__pnty.o" "SilverVase:SilverVaseShape.pt[3404].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3404__pnty.o" "SilverVase1Shape.pt[3404].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3404__pntz.o" "SilverVase:SilverVaseShape.pt[3404].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3404__pntz.o" "SilverVase1Shape.pt[3404].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3410__pntx.o" "SilverVase:SilverVaseShape.pt[3410].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3410__pntx.o" "SilverVase1Shape.pt[3410].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3410__pnty.o" "SilverVase:SilverVaseShape.pt[3410].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3410__pnty.o" "SilverVase1Shape.pt[3410].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3410__pntz.o" "SilverVase:SilverVaseShape.pt[3410].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3410__pntz.o" "SilverVase1Shape.pt[3410].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3411__pntx.o" "SilverVase:SilverVaseShape.pt[3411].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3411__pntx.o" "SilverVase1Shape.pt[3411].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3411__pnty.o" "SilverVase:SilverVaseShape.pt[3411].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3411__pnty.o" "SilverVase1Shape.pt[3411].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3411__pntz.o" "SilverVase:SilverVaseShape.pt[3411].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3411__pntz.o" "SilverVase1Shape.pt[3411].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3412__pntx.o" "SilverVase:SilverVaseShape.pt[3412].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3412__pntx.o" "SilverVase1Shape.pt[3412].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3412__pnty.o" "SilverVase:SilverVaseShape.pt[3412].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3412__pnty.o" "SilverVase1Shape.pt[3412].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3412__pntz.o" "SilverVase:SilverVaseShape.pt[3412].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3412__pntz.o" "SilverVase1Shape.pt[3412].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3413__pntx.o" "SilverVase:SilverVaseShape.pt[3413].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3413__pntx.o" "SilverVase1Shape.pt[3413].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3413__pnty.o" "SilverVase:SilverVaseShape.pt[3413].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3413__pnty.o" "SilverVase1Shape.pt[3413].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3413__pntz.o" "SilverVase:SilverVaseShape.pt[3413].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3413__pntz.o" "SilverVase1Shape.pt[3413].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3414__pntx.o" "SilverVase:SilverVaseShape.pt[3414].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_3414__pntx.o" "SilverVase1Shape.pt[3414].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3414__pnty.o" "SilverVase:SilverVaseShape.pt[3414].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_3414__pnty.o" "SilverVase1Shape.pt[3414].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_3414__pntz.o" "SilverVase:SilverVaseShape.pt[3414].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_3414__pntz.o" "SilverVase1Shape.pt[3414].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_4500__pntx.o" "SilverVase:SilverVaseShape.pt[4500].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_4500__pntx.o" "SilverVase1Shape.pt[4500].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_4500__pnty.o" "SilverVase:SilverVaseShape.pt[4500].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_4500__pnty.o" "SilverVase1Shape.pt[4500].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_4500__pntz.o" "SilverVase:SilverVaseShape.pt[4500].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_4500__pntz.o" "SilverVase1Shape.pt[4500].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6078__pntx.o" "SilverVase:SilverVaseShape.pt[6078].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6078__pntx.o" "SilverVase1Shape.pt[6078].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6078__pnty.o" "SilverVase:SilverVaseShape.pt[6078].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6078__pnty.o" "SilverVase1Shape.pt[6078].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6078__pntz.o" "SilverVase:SilverVaseShape.pt[6078].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6078__pntz.o" "SilverVase1Shape.pt[6078].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6079__pntx.o" "SilverVase:SilverVaseShape.pt[6079].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6079__pntx.o" "SilverVase1Shape.pt[6079].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6079__pnty.o" "SilverVase:SilverVaseShape.pt[6079].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6079__pnty.o" "SilverVase1Shape.pt[6079].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6079__pntz.o" "SilverVase:SilverVaseShape.pt[6079].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6079__pntz.o" "SilverVase1Shape.pt[6079].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6080__pntx.o" "SilverVase:SilverVaseShape.pt[6080].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6080__pntx.o" "SilverVase1Shape.pt[6080].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6080__pnty.o" "SilverVase:SilverVaseShape.pt[6080].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6080__pnty.o" "SilverVase1Shape.pt[6080].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6080__pntz.o" "SilverVase:SilverVaseShape.pt[6080].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6080__pntz.o" "SilverVase1Shape.pt[6080].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6081__pntx.o" "SilverVase:SilverVaseShape.pt[6081].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6081__pntx.o" "SilverVase1Shape.pt[6081].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6081__pnty.o" "SilverVase:SilverVaseShape.pt[6081].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6081__pnty.o" "SilverVase1Shape.pt[6081].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6081__pntz.o" "SilverVase:SilverVaseShape.pt[6081].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6081__pntz.o" "SilverVase1Shape.pt[6081].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6082__pntx.o" "SilverVase:SilverVaseShape.pt[6082].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6082__pntx.o" "SilverVase1Shape.pt[6082].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6082__pnty.o" "SilverVase:SilverVaseShape.pt[6082].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6082__pnty.o" "SilverVase1Shape.pt[6082].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6082__pntz.o" "SilverVase:SilverVaseShape.pt[6082].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6082__pntz.o" "SilverVase1Shape.pt[6082].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6083__pntx.o" "SilverVase:SilverVaseShape.pt[6083].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6083__pntx.o" "SilverVase1Shape.pt[6083].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6083__pnty.o" "SilverVase:SilverVaseShape.pt[6083].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6083__pnty.o" "SilverVase1Shape.pt[6083].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6083__pntz.o" "SilverVase:SilverVaseShape.pt[6083].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6083__pntz.o" "SilverVase1Shape.pt[6083].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6084__pntx.o" "SilverVase:SilverVaseShape.pt[6084].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6084__pntx.o" "SilverVase1Shape.pt[6084].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6084__pnty.o" "SilverVase:SilverVaseShape.pt[6084].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6084__pnty.o" "SilverVase1Shape.pt[6084].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6084__pntz.o" "SilverVase:SilverVaseShape.pt[6084].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6084__pntz.o" "SilverVase1Shape.pt[6084].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6085__pntx.o" "SilverVase:SilverVaseShape.pt[6085].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6085__pntx.o" "SilverVase1Shape.pt[6085].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6085__pnty.o" "SilverVase:SilverVaseShape.pt[6085].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6085__pnty.o" "SilverVase1Shape.pt[6085].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6085__pntz.o" "SilverVase:SilverVaseShape.pt[6085].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6085__pntz.o" "SilverVase1Shape.pt[6085].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6086__pntx.o" "SilverVase:SilverVaseShape.pt[6086].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6086__pntx.o" "SilverVase1Shape.pt[6086].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6086__pnty.o" "SilverVase:SilverVaseShape.pt[6086].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6086__pnty.o" "SilverVase1Shape.pt[6086].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6086__pntz.o" "SilverVase:SilverVaseShape.pt[6086].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6086__pntz.o" "SilverVase1Shape.pt[6086].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6087__pntx.o" "SilverVase:SilverVaseShape.pt[6087].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6087__pntx.o" "SilverVase1Shape.pt[6087].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6087__pnty.o" "SilverVase:SilverVaseShape.pt[6087].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6087__pnty.o" "SilverVase1Shape.pt[6087].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6087__pntz.o" "SilverVase:SilverVaseShape.pt[6087].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6087__pntz.o" "SilverVase1Shape.pt[6087].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6088__pntx.o" "SilverVase:SilverVaseShape.pt[6088].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6088__pntx.o" "SilverVase1Shape.pt[6088].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6088__pnty.o" "SilverVase:SilverVaseShape.pt[6088].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6088__pnty.o" "SilverVase1Shape.pt[6088].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6088__pntz.o" "SilverVase:SilverVaseShape.pt[6088].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6088__pntz.o" "SilverVase1Shape.pt[6088].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6089__pntx.o" "SilverVase:SilverVaseShape.pt[6089].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6089__pntx.o" "SilverVase1Shape.pt[6089].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6089__pnty.o" "SilverVase:SilverVaseShape.pt[6089].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6089__pnty.o" "SilverVase1Shape.pt[6089].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6089__pntz.o" "SilverVase:SilverVaseShape.pt[6089].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6089__pntz.o" "SilverVase1Shape.pt[6089].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6090__pntx.o" "SilverVase:SilverVaseShape.pt[6090].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6090__pntx.o" "SilverVase1Shape.pt[6090].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6090__pnty.o" "SilverVase:SilverVaseShape.pt[6090].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6090__pnty.o" "SilverVase1Shape.pt[6090].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6090__pntz.o" "SilverVase:SilverVaseShape.pt[6090].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6090__pntz.o" "SilverVase1Shape.pt[6090].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6091__pntx.o" "SilverVase:SilverVaseShape.pt[6091].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6091__pntx.o" "SilverVase1Shape.pt[6091].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6091__pnty.o" "SilverVase:SilverVaseShape.pt[6091].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6091__pnty.o" "SilverVase1Shape.pt[6091].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6091__pntz.o" "SilverVase:SilverVaseShape.pt[6091].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6091__pntz.o" "SilverVase1Shape.pt[6091].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6092__pntx.o" "SilverVase:SilverVaseShape.pt[6092].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6092__pntx.o" "SilverVase1Shape.pt[6092].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6092__pnty.o" "SilverVase:SilverVaseShape.pt[6092].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6092__pnty.o" "SilverVase1Shape.pt[6092].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6092__pntz.o" "SilverVase:SilverVaseShape.pt[6092].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6092__pntz.o" "SilverVase1Shape.pt[6092].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6093__pntx.o" "SilverVase:SilverVaseShape.pt[6093].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6093__pntx.o" "SilverVase1Shape.pt[6093].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6093__pnty.o" "SilverVase:SilverVaseShape.pt[6093].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6093__pnty.o" "SilverVase1Shape.pt[6093].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6093__pntz.o" "SilverVase:SilverVaseShape.pt[6093].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6093__pntz.o" "SilverVase1Shape.pt[6093].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6094__pntx.o" "SilverVase:SilverVaseShape.pt[6094].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6094__pntx.o" "SilverVase1Shape.pt[6094].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6094__pnty.o" "SilverVase:SilverVaseShape.pt[6094].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6094__pnty.o" "SilverVase1Shape.pt[6094].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6094__pntz.o" "SilverVase:SilverVaseShape.pt[6094].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6094__pntz.o" "SilverVase1Shape.pt[6094].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6095__pntx.o" "SilverVase:SilverVaseShape.pt[6095].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6095__pntx.o" "SilverVase1Shape.pt[6095].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6095__pnty.o" "SilverVase:SilverVaseShape.pt[6095].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6095__pnty.o" "SilverVase1Shape.pt[6095].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6095__pntz.o" "SilverVase:SilverVaseShape.pt[6095].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6095__pntz.o" "SilverVase1Shape.pt[6095].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6096__pntx.o" "SilverVase:SilverVaseShape.pt[6096].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6096__pntx.o" "SilverVase1Shape.pt[6096].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6096__pnty.o" "SilverVase:SilverVaseShape.pt[6096].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6096__pnty.o" "SilverVase1Shape.pt[6096].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6096__pntz.o" "SilverVase:SilverVaseShape.pt[6096].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6096__pntz.o" "SilverVase1Shape.pt[6096].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6097__pntx.o" "SilverVase:SilverVaseShape.pt[6097].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6097__pntx.o" "SilverVase1Shape.pt[6097].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6097__pnty.o" "SilverVase:SilverVaseShape.pt[6097].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6097__pnty.o" "SilverVase1Shape.pt[6097].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6097__pntz.o" "SilverVase:SilverVaseShape.pt[6097].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6097__pntz.o" "SilverVase1Shape.pt[6097].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6098__pntx.o" "SilverVase:SilverVaseShape.pt[6098].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6098__pntx.o" "SilverVase1Shape.pt[6098].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6098__pnty.o" "SilverVase:SilverVaseShape.pt[6098].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6098__pnty.o" "SilverVase1Shape.pt[6098].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6098__pntz.o" "SilverVase:SilverVaseShape.pt[6098].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6098__pntz.o" "SilverVase1Shape.pt[6098].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6099__pntx.o" "SilverVase:SilverVaseShape.pt[6099].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6099__pntx.o" "SilverVase1Shape.pt[6099].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6099__pnty.o" "SilverVase:SilverVaseShape.pt[6099].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6099__pnty.o" "SilverVase1Shape.pt[6099].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6099__pntz.o" "SilverVase:SilverVaseShape.pt[6099].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6099__pntz.o" "SilverVase1Shape.pt[6099].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6100__pntx.o" "SilverVase:SilverVaseShape.pt[6100].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6100__pntx.o" "SilverVase1Shape.pt[6100].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6100__pnty.o" "SilverVase:SilverVaseShape.pt[6100].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6100__pnty.o" "SilverVase1Shape.pt[6100].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6100__pntz.o" "SilverVase:SilverVaseShape.pt[6100].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6100__pntz.o" "SilverVase1Shape.pt[6100].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6101__pntx.o" "SilverVase:SilverVaseShape.pt[6101].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6101__pntx.o" "SilverVase1Shape.pt[6101].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6101__pnty.o" "SilverVase:SilverVaseShape.pt[6101].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6101__pnty.o" "SilverVase1Shape.pt[6101].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6101__pntz.o" "SilverVase:SilverVaseShape.pt[6101].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6101__pntz.o" "SilverVase1Shape.pt[6101].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6102__pntx.o" "SilverVase:SilverVaseShape.pt[6102].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6102__pntx.o" "SilverVase1Shape.pt[6102].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6102__pnty.o" "SilverVase:SilverVaseShape.pt[6102].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6102__pnty.o" "SilverVase1Shape.pt[6102].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6102__pntz.o" "SilverVase:SilverVaseShape.pt[6102].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6102__pntz.o" "SilverVase1Shape.pt[6102].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6103__pntx.o" "SilverVase:SilverVaseShape.pt[6103].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6103__pntx.o" "SilverVase1Shape.pt[6103].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6103__pnty.o" "SilverVase:SilverVaseShape.pt[6103].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6103__pnty.o" "SilverVase1Shape.pt[6103].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6103__pntz.o" "SilverVase:SilverVaseShape.pt[6103].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6103__pntz.o" "SilverVase1Shape.pt[6103].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6104__pntx.o" "SilverVase:SilverVaseShape.pt[6104].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6104__pntx.o" "SilverVase1Shape.pt[6104].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6104__pnty.o" "SilverVase:SilverVaseShape.pt[6104].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6104__pnty.o" "SilverVase1Shape.pt[6104].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6104__pntz.o" "SilverVase:SilverVaseShape.pt[6104].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6104__pntz.o" "SilverVase1Shape.pt[6104].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6105__pntx.o" "SilverVase:SilverVaseShape.pt[6105].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6105__pntx.o" "SilverVase1Shape.pt[6105].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6105__pnty.o" "SilverVase:SilverVaseShape.pt[6105].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6105__pnty.o" "SilverVase1Shape.pt[6105].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6105__pntz.o" "SilverVase:SilverVaseShape.pt[6105].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6105__pntz.o" "SilverVase1Shape.pt[6105].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6106__pntx.o" "SilverVase:SilverVaseShape.pt[6106].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6106__pntx.o" "SilverVase1Shape.pt[6106].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6106__pnty.o" "SilverVase:SilverVaseShape.pt[6106].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6106__pnty.o" "SilverVase1Shape.pt[6106].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6106__pntz.o" "SilverVase:SilverVaseShape.pt[6106].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6106__pntz.o" "SilverVase1Shape.pt[6106].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6107__pntx.o" "SilverVase:SilverVaseShape.pt[6107].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6107__pntx.o" "SilverVase1Shape.pt[6107].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6107__pnty.o" "SilverVase:SilverVaseShape.pt[6107].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6107__pnty.o" "SilverVase1Shape.pt[6107].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6107__pntz.o" "SilverVase:SilverVaseShape.pt[6107].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6107__pntz.o" "SilverVase1Shape.pt[6107].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6108__pntx.o" "SilverVase:SilverVaseShape.pt[6108].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6108__pntx.o" "SilverVase1Shape.pt[6108].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6108__pnty.o" "SilverVase:SilverVaseShape.pt[6108].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6108__pnty.o" "SilverVase1Shape.pt[6108].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6108__pntz.o" "SilverVase:SilverVaseShape.pt[6108].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6108__pntz.o" "SilverVase1Shape.pt[6108].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6109__pntx.o" "SilverVase:SilverVaseShape.pt[6109].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6109__pntx.o" "SilverVase1Shape.pt[6109].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6109__pnty.o" "SilverVase:SilverVaseShape.pt[6109].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6109__pnty.o" "SilverVase1Shape.pt[6109].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6109__pntz.o" "SilverVase:SilverVaseShape.pt[6109].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6109__pntz.o" "SilverVase1Shape.pt[6109].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6110__pntx.o" "SilverVase:SilverVaseShape.pt[6110].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6110__pntx.o" "SilverVase1Shape.pt[6110].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6110__pnty.o" "SilverVase:SilverVaseShape.pt[6110].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6110__pnty.o" "SilverVase1Shape.pt[6110].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6110__pntz.o" "SilverVase:SilverVaseShape.pt[6110].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6110__pntz.o" "SilverVase1Shape.pt[6110].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6111__pntx.o" "SilverVase:SilverVaseShape.pt[6111].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6111__pntx.o" "SilverVase1Shape.pt[6111].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6111__pnty.o" "SilverVase:SilverVaseShape.pt[6111].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6111__pnty.o" "SilverVase1Shape.pt[6111].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6111__pntz.o" "SilverVase:SilverVaseShape.pt[6111].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6111__pntz.o" "SilverVase1Shape.pt[6111].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6112__pntx.o" "SilverVase:SilverVaseShape.pt[6112].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6112__pntx.o" "SilverVase1Shape.pt[6112].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6112__pnty.o" "SilverVase:SilverVaseShape.pt[6112].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6112__pnty.o" "SilverVase1Shape.pt[6112].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6112__pntz.o" "SilverVase:SilverVaseShape.pt[6112].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6112__pntz.o" "SilverVase1Shape.pt[6112].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6113__pntx.o" "SilverVase:SilverVaseShape.pt[6113].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6113__pntx.o" "SilverVase1Shape.pt[6113].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6113__pnty.o" "SilverVase:SilverVaseShape.pt[6113].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6113__pnty.o" "SilverVase1Shape.pt[6113].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6113__pntz.o" "SilverVase:SilverVaseShape.pt[6113].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6113__pntz.o" "SilverVase1Shape.pt[6113].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6114__pntx.o" "SilverVase:SilverVaseShape.pt[6114].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6114__pntx.o" "SilverVase1Shape.pt[6114].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6114__pnty.o" "SilverVase:SilverVaseShape.pt[6114].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6114__pnty.o" "SilverVase1Shape.pt[6114].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6114__pntz.o" "SilverVase:SilverVaseShape.pt[6114].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6114__pntz.o" "SilverVase1Shape.pt[6114].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6115__pntx.o" "SilverVase:SilverVaseShape.pt[6115].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6115__pntx.o" "SilverVase1Shape.pt[6115].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6115__pnty.o" "SilverVase:SilverVaseShape.pt[6115].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6115__pnty.o" "SilverVase1Shape.pt[6115].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6115__pntz.o" "SilverVase:SilverVaseShape.pt[6115].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6115__pntz.o" "SilverVase1Shape.pt[6115].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6116__pntx.o" "SilverVase:SilverVaseShape.pt[6116].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6116__pntx.o" "SilverVase1Shape.pt[6116].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6116__pnty.o" "SilverVase:SilverVaseShape.pt[6116].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6116__pnty.o" "SilverVase1Shape.pt[6116].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6116__pntz.o" "SilverVase:SilverVaseShape.pt[6116].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6116__pntz.o" "SilverVase1Shape.pt[6116].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6117__pntx.o" "SilverVase:SilverVaseShape.pt[6117].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6117__pntx.o" "SilverVase1Shape.pt[6117].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6117__pnty.o" "SilverVase:SilverVaseShape.pt[6117].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6117__pnty.o" "SilverVase1Shape.pt[6117].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6117__pntz.o" "SilverVase:SilverVaseShape.pt[6117].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6117__pntz.o" "SilverVase1Shape.pt[6117].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6118__pntx.o" "SilverVase:SilverVaseShape.pt[6118].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6118__pntx.o" "SilverVase1Shape.pt[6118].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6118__pnty.o" "SilverVase:SilverVaseShape.pt[6118].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6118__pnty.o" "SilverVase1Shape.pt[6118].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6118__pntz.o" "SilverVase:SilverVaseShape.pt[6118].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6118__pntz.o" "SilverVase1Shape.pt[6118].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6119__pntx.o" "SilverVase:SilverVaseShape.pt[6119].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6119__pntx.o" "SilverVase1Shape.pt[6119].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6119__pnty.o" "SilverVase:SilverVaseShape.pt[6119].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6119__pnty.o" "SilverVase1Shape.pt[6119].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6119__pntz.o" "SilverVase:SilverVaseShape.pt[6119].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6119__pntz.o" "SilverVase1Shape.pt[6119].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6120__pntx.o" "SilverVase:SilverVaseShape.pt[6120].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6120__pntx.o" "SilverVase1Shape.pt[6120].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6120__pnty.o" "SilverVase:SilverVaseShape.pt[6120].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6120__pnty.o" "SilverVase1Shape.pt[6120].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6120__pntz.o" "SilverVase:SilverVaseShape.pt[6120].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6120__pntz.o" "SilverVase1Shape.pt[6120].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6121__pntx.o" "SilverVase:SilverVaseShape.pt[6121].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6121__pntx.o" "SilverVase1Shape.pt[6121].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6121__pnty.o" "SilverVase:SilverVaseShape.pt[6121].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6121__pnty.o" "SilverVase1Shape.pt[6121].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6121__pntz.o" "SilverVase:SilverVaseShape.pt[6121].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6121__pntz.o" "SilverVase1Shape.pt[6121].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6122__pntx.o" "SilverVase:SilverVaseShape.pt[6122].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6122__pntx.o" "SilverVase1Shape.pt[6122].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6122__pnty.o" "SilverVase:SilverVaseShape.pt[6122].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6122__pnty.o" "SilverVase1Shape.pt[6122].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6122__pntz.o" "SilverVase:SilverVaseShape.pt[6122].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6122__pntz.o" "SilverVase1Shape.pt[6122].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6123__pntx.o" "SilverVase:SilverVaseShape.pt[6123].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6123__pntx.o" "SilverVase1Shape.pt[6123].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6123__pnty.o" "SilverVase:SilverVaseShape.pt[6123].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6123__pnty.o" "SilverVase1Shape.pt[6123].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6123__pntz.o" "SilverVase:SilverVaseShape.pt[6123].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6123__pntz.o" "SilverVase1Shape.pt[6123].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6124__pntx.o" "SilverVase:SilverVaseShape.pt[6124].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6124__pntx.o" "SilverVase1Shape.pt[6124].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6124__pnty.o" "SilverVase:SilverVaseShape.pt[6124].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6124__pnty.o" "SilverVase1Shape.pt[6124].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6124__pntz.o" "SilverVase:SilverVaseShape.pt[6124].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6124__pntz.o" "SilverVase1Shape.pt[6124].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6125__pntx.o" "SilverVase:SilverVaseShape.pt[6125].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6125__pntx.o" "SilverVase1Shape.pt[6125].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6125__pnty.o" "SilverVase:SilverVaseShape.pt[6125].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6125__pnty.o" "SilverVase1Shape.pt[6125].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6125__pntz.o" "SilverVase:SilverVaseShape.pt[6125].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6125__pntz.o" "SilverVase1Shape.pt[6125].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6126__pntx.o" "SilverVase:SilverVaseShape.pt[6126].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6126__pntx.o" "SilverVase1Shape.pt[6126].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6126__pnty.o" "SilverVase:SilverVaseShape.pt[6126].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6126__pnty.o" "SilverVase1Shape.pt[6126].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6126__pntz.o" "SilverVase:SilverVaseShape.pt[6126].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6126__pntz.o" "SilverVase1Shape.pt[6126].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6127__pntx.o" "SilverVase:SilverVaseShape.pt[6127].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6127__pntx.o" "SilverVase1Shape.pt[6127].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6127__pnty.o" "SilverVase:SilverVaseShape.pt[6127].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6127__pnty.o" "SilverVase1Shape.pt[6127].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6127__pntz.o" "SilverVase:SilverVaseShape.pt[6127].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6127__pntz.o" "SilverVase1Shape.pt[6127].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6128__pntx.o" "SilverVase:SilverVaseShape.pt[6128].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6128__pntx.o" "SilverVase1Shape.pt[6128].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6128__pnty.o" "SilverVase:SilverVaseShape.pt[6128].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6128__pnty.o" "SilverVase1Shape.pt[6128].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6128__pntz.o" "SilverVase:SilverVaseShape.pt[6128].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6128__pntz.o" "SilverVase1Shape.pt[6128].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6129__pntx.o" "SilverVase:SilverVaseShape.pt[6129].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6129__pntx.o" "SilverVase1Shape.pt[6129].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6129__pnty.o" "SilverVase:SilverVaseShape.pt[6129].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6129__pnty.o" "SilverVase1Shape.pt[6129].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6129__pntz.o" "SilverVase:SilverVaseShape.pt[6129].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6129__pntz.o" "SilverVase1Shape.pt[6129].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6130__pntx.o" "SilverVase:SilverVaseShape.pt[6130].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6130__pntx.o" "SilverVase1Shape.pt[6130].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6130__pnty.o" "SilverVase:SilverVaseShape.pt[6130].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6130__pnty.o" "SilverVase1Shape.pt[6130].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6130__pntz.o" "SilverVase:SilverVaseShape.pt[6130].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6130__pntz.o" "SilverVase1Shape.pt[6130].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6131__pntx.o" "SilverVase:SilverVaseShape.pt[6131].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6131__pntx.o" "SilverVase1Shape.pt[6131].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6131__pnty.o" "SilverVase:SilverVaseShape.pt[6131].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6131__pnty.o" "SilverVase1Shape.pt[6131].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6131__pntz.o" "SilverVase:SilverVaseShape.pt[6131].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6131__pntz.o" "SilverVase1Shape.pt[6131].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6132__pntx.o" "SilverVase:SilverVaseShape.pt[6132].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6132__pntx.o" "SilverVase1Shape.pt[6132].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6132__pnty.o" "SilverVase:SilverVaseShape.pt[6132].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6132__pnty.o" "SilverVase1Shape.pt[6132].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6132__pntz.o" "SilverVase:SilverVaseShape.pt[6132].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6132__pntz.o" "SilverVase1Shape.pt[6132].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6133__pntx.o" "SilverVase:SilverVaseShape.pt[6133].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6133__pntx.o" "SilverVase1Shape.pt[6133].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6133__pnty.o" "SilverVase:SilverVaseShape.pt[6133].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6133__pnty.o" "SilverVase1Shape.pt[6133].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6133__pntz.o" "SilverVase:SilverVaseShape.pt[6133].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6133__pntz.o" "SilverVase1Shape.pt[6133].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6134__pntx.o" "SilverVase:SilverVaseShape.pt[6134].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6134__pntx.o" "SilverVase1Shape.pt[6134].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6134__pnty.o" "SilverVase:SilverVaseShape.pt[6134].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6134__pnty.o" "SilverVase1Shape.pt[6134].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6134__pntz.o" "SilverVase:SilverVaseShape.pt[6134].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6134__pntz.o" "SilverVase1Shape.pt[6134].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6135__pntx.o" "SilverVase:SilverVaseShape.pt[6135].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6135__pntx.o" "SilverVase1Shape.pt[6135].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6135__pnty.o" "SilverVase:SilverVaseShape.pt[6135].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6135__pnty.o" "SilverVase1Shape.pt[6135].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6135__pntz.o" "SilverVase:SilverVaseShape.pt[6135].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6135__pntz.o" "SilverVase1Shape.pt[6135].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6136__pntx.o" "SilverVase:SilverVaseShape.pt[6136].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6136__pntx.o" "SilverVase1Shape.pt[6136].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6136__pnty.o" "SilverVase:SilverVaseShape.pt[6136].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6136__pnty.o" "SilverVase1Shape.pt[6136].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6136__pntz.o" "SilverVase:SilverVaseShape.pt[6136].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6136__pntz.o" "SilverVase1Shape.pt[6136].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6137__pntx.o" "SilverVase:SilverVaseShape.pt[6137].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6137__pntx.o" "SilverVase1Shape.pt[6137].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6137__pnty.o" "SilverVase:SilverVaseShape.pt[6137].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6137__pnty.o" "SilverVase1Shape.pt[6137].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6137__pntz.o" "SilverVase:SilverVaseShape.pt[6137].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6137__pntz.o" "SilverVase1Shape.pt[6137].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6138__pntx.o" "SilverVase:SilverVaseShape.pt[6138].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6138__pntx.o" "SilverVase1Shape.pt[6138].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6138__pnty.o" "SilverVase:SilverVaseShape.pt[6138].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6138__pnty.o" "SilverVase1Shape.pt[6138].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6138__pntz.o" "SilverVase:SilverVaseShape.pt[6138].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6138__pntz.o" "SilverVase1Shape.pt[6138].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6139__pntx.o" "SilverVase:SilverVaseShape.pt[6139].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6139__pntx.o" "SilverVase1Shape.pt[6139].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6139__pnty.o" "SilverVase:SilverVaseShape.pt[6139].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6139__pnty.o" "SilverVase1Shape.pt[6139].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6139__pntz.o" "SilverVase:SilverVaseShape.pt[6139].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6139__pntz.o" "SilverVase1Shape.pt[6139].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6140__pntx.o" "SilverVase:SilverVaseShape.pt[6140].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6140__pntx.o" "SilverVase1Shape.pt[6140].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6140__pnty.o" "SilverVase:SilverVaseShape.pt[6140].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6140__pnty.o" "SilverVase1Shape.pt[6140].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6140__pntz.o" "SilverVase:SilverVaseShape.pt[6140].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6140__pntz.o" "SilverVase1Shape.pt[6140].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6141__pntx.o" "SilverVase:SilverVaseShape.pt[6141].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6141__pntx.o" "SilverVase1Shape.pt[6141].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6141__pnty.o" "SilverVase:SilverVaseShape.pt[6141].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6141__pnty.o" "SilverVase1Shape.pt[6141].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6141__pntz.o" "SilverVase:SilverVaseShape.pt[6141].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6141__pntz.o" "SilverVase1Shape.pt[6141].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6142__pntx.o" "SilverVase:SilverVaseShape.pt[6142].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6142__pntx.o" "SilverVase1Shape.pt[6142].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6142__pnty.o" "SilverVase:SilverVaseShape.pt[6142].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6142__pnty.o" "SilverVase1Shape.pt[6142].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6142__pntz.o" "SilverVase:SilverVaseShape.pt[6142].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6142__pntz.o" "SilverVase1Shape.pt[6142].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6143__pntx.o" "SilverVase:SilverVaseShape.pt[6143].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6143__pntx.o" "SilverVase1Shape.pt[6143].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6143__pnty.o" "SilverVase:SilverVaseShape.pt[6143].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6143__pnty.o" "SilverVase1Shape.pt[6143].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6143__pntz.o" "SilverVase:SilverVaseShape.pt[6143].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6143__pntz.o" "SilverVase1Shape.pt[6143].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6144__pntx.o" "SilverVase:SilverVaseShape.pt[6144].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6144__pntx.o" "SilverVase1Shape.pt[6144].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6144__pnty.o" "SilverVase:SilverVaseShape.pt[6144].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6144__pnty.o" "SilverVase1Shape.pt[6144].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6144__pntz.o" "SilverVase:SilverVaseShape.pt[6144].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6144__pntz.o" "SilverVase1Shape.pt[6144].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6145__pntx.o" "SilverVase:SilverVaseShape.pt[6145].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6145__pntx.o" "SilverVase1Shape.pt[6145].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6145__pnty.o" "SilverVase:SilverVaseShape.pt[6145].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6145__pnty.o" "SilverVase1Shape.pt[6145].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6145__pntz.o" "SilverVase:SilverVaseShape.pt[6145].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6145__pntz.o" "SilverVase1Shape.pt[6145].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6146__pntx.o" "SilverVase:SilverVaseShape.pt[6146].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6146__pntx.o" "SilverVase1Shape.pt[6146].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6146__pnty.o" "SilverVase:SilverVaseShape.pt[6146].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6146__pnty.o" "SilverVase1Shape.pt[6146].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6146__pntz.o" "SilverVase:SilverVaseShape.pt[6146].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6146__pntz.o" "SilverVase1Shape.pt[6146].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6147__pntx.o" "SilverVase:SilverVaseShape.pt[6147].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6147__pntx.o" "SilverVase1Shape.pt[6147].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6147__pnty.o" "SilverVase:SilverVaseShape.pt[6147].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6147__pnty.o" "SilverVase1Shape.pt[6147].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6147__pntz.o" "SilverVase:SilverVaseShape.pt[6147].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6147__pntz.o" "SilverVase1Shape.pt[6147].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6148__pntx.o" "SilverVase:SilverVaseShape.pt[6148].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6148__pntx.o" "SilverVase1Shape.pt[6148].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6148__pnty.o" "SilverVase:SilverVaseShape.pt[6148].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6148__pnty.o" "SilverVase1Shape.pt[6148].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6148__pntz.o" "SilverVase:SilverVaseShape.pt[6148].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6148__pntz.o" "SilverVase1Shape.pt[6148].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6149__pntx.o" "SilverVase:SilverVaseShape.pt[6149].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6149__pntx.o" "SilverVase1Shape.pt[6149].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6149__pnty.o" "SilverVase:SilverVaseShape.pt[6149].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6149__pnty.o" "SilverVase1Shape.pt[6149].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6149__pntz.o" "SilverVase:SilverVaseShape.pt[6149].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6149__pntz.o" "SilverVase1Shape.pt[6149].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6150__pntx.o" "SilverVase:SilverVaseShape.pt[6150].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6150__pntx.o" "SilverVase1Shape.pt[6150].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6150__pnty.o" "SilverVase:SilverVaseShape.pt[6150].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6150__pnty.o" "SilverVase1Shape.pt[6150].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6150__pntz.o" "SilverVase:SilverVaseShape.pt[6150].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6150__pntz.o" "SilverVase1Shape.pt[6150].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6151__pntx.o" "SilverVase:SilverVaseShape.pt[6151].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6151__pntx.o" "SilverVase1Shape.pt[6151].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6151__pnty.o" "SilverVase:SilverVaseShape.pt[6151].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6151__pnty.o" "SilverVase1Shape.pt[6151].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6151__pntz.o" "SilverVase:SilverVaseShape.pt[6151].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6151__pntz.o" "SilverVase1Shape.pt[6151].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6152__pntx.o" "SilverVase:SilverVaseShape.pt[6152].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6152__pntx.o" "SilverVase1Shape.pt[6152].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6152__pnty.o" "SilverVase:SilverVaseShape.pt[6152].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6152__pnty.o" "SilverVase1Shape.pt[6152].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6152__pntz.o" "SilverVase:SilverVaseShape.pt[6152].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6152__pntz.o" "SilverVase1Shape.pt[6152].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6153__pntx.o" "SilverVase:SilverVaseShape.pt[6153].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6153__pntx.o" "SilverVase1Shape.pt[6153].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6153__pnty.o" "SilverVase:SilverVaseShape.pt[6153].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6153__pnty.o" "SilverVase1Shape.pt[6153].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6153__pntz.o" "SilverVase:SilverVaseShape.pt[6153].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6153__pntz.o" "SilverVase1Shape.pt[6153].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6154__pntx.o" "SilverVase:SilverVaseShape.pt[6154].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6154__pntx.o" "SilverVase1Shape.pt[6154].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6154__pnty.o" "SilverVase:SilverVaseShape.pt[6154].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6154__pnty.o" "SilverVase1Shape.pt[6154].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6154__pntz.o" "SilverVase:SilverVaseShape.pt[6154].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6154__pntz.o" "SilverVase1Shape.pt[6154].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6155__pntx.o" "SilverVase:SilverVaseShape.pt[6155].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6155__pntx.o" "SilverVase1Shape.pt[6155].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6155__pnty.o" "SilverVase:SilverVaseShape.pt[6155].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6155__pnty.o" "SilverVase1Shape.pt[6155].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6155__pntz.o" "SilverVase:SilverVaseShape.pt[6155].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6155__pntz.o" "SilverVase1Shape.pt[6155].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6156__pntx.o" "SilverVase:SilverVaseShape.pt[6156].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6156__pntx.o" "SilverVase1Shape.pt[6156].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6156__pnty.o" "SilverVase:SilverVaseShape.pt[6156].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6156__pnty.o" "SilverVase1Shape.pt[6156].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6156__pntz.o" "SilverVase:SilverVaseShape.pt[6156].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6156__pntz.o" "SilverVase1Shape.pt[6156].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6157__pntx.o" "SilverVase:SilverVaseShape.pt[6157].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6157__pntx.o" "SilverVase1Shape.pt[6157].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6157__pnty.o" "SilverVase:SilverVaseShape.pt[6157].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6157__pnty.o" "SilverVase1Shape.pt[6157].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6157__pntz.o" "SilverVase:SilverVaseShape.pt[6157].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6157__pntz.o" "SilverVase1Shape.pt[6157].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6158__pntx.o" "SilverVase:SilverVaseShape.pt[6158].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6158__pntx.o" "SilverVase1Shape.pt[6158].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6158__pnty.o" "SilverVase:SilverVaseShape.pt[6158].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6158__pnty.o" "SilverVase1Shape.pt[6158].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6158__pntz.o" "SilverVase:SilverVaseShape.pt[6158].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6158__pntz.o" "SilverVase1Shape.pt[6158].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6159__pntx.o" "SilverVase:SilverVaseShape.pt[6159].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6159__pntx.o" "SilverVase1Shape.pt[6159].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6159__pnty.o" "SilverVase:SilverVaseShape.pt[6159].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6159__pnty.o" "SilverVase1Shape.pt[6159].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6159__pntz.o" "SilverVase:SilverVaseShape.pt[6159].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6159__pntz.o" "SilverVase1Shape.pt[6159].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6160__pntx.o" "SilverVase:SilverVaseShape.pt[6160].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6160__pntx.o" "SilverVase1Shape.pt[6160].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6160__pnty.o" "SilverVase:SilverVaseShape.pt[6160].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6160__pnty.o" "SilverVase1Shape.pt[6160].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6160__pntz.o" "SilverVase:SilverVaseShape.pt[6160].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6160__pntz.o" "SilverVase1Shape.pt[6160].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6161__pntx.o" "SilverVase:SilverVaseShape.pt[6161].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6161__pntx.o" "SilverVase1Shape.pt[6161].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6161__pnty.o" "SilverVase:SilverVaseShape.pt[6161].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6161__pnty.o" "SilverVase1Shape.pt[6161].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6161__pntz.o" "SilverVase:SilverVaseShape.pt[6161].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6161__pntz.o" "SilverVase1Shape.pt[6161].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6162__pntx.o" "SilverVase:SilverVaseShape.pt[6162].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6162__pntx.o" "SilverVase1Shape.pt[6162].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6162__pnty.o" "SilverVase:SilverVaseShape.pt[6162].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6162__pnty.o" "SilverVase1Shape.pt[6162].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6162__pntz.o" "SilverVase:SilverVaseShape.pt[6162].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6162__pntz.o" "SilverVase1Shape.pt[6162].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6163__pntx.o" "SilverVase:SilverVaseShape.pt[6163].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6163__pntx.o" "SilverVase1Shape.pt[6163].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6163__pnty.o" "SilverVase:SilverVaseShape.pt[6163].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6163__pnty.o" "SilverVase1Shape.pt[6163].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6163__pntz.o" "SilverVase:SilverVaseShape.pt[6163].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6163__pntz.o" "SilverVase1Shape.pt[6163].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6164__pntx.o" "SilverVase:SilverVaseShape.pt[6164].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6164__pntx.o" "SilverVase1Shape.pt[6164].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6164__pnty.o" "SilverVase:SilverVaseShape.pt[6164].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6164__pnty.o" "SilverVase1Shape.pt[6164].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6164__pntz.o" "SilverVase:SilverVaseShape.pt[6164].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6164__pntz.o" "SilverVase1Shape.pt[6164].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6165__pntx.o" "SilverVase:SilverVaseShape.pt[6165].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6165__pntx.o" "SilverVase1Shape.pt[6165].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6165__pnty.o" "SilverVase:SilverVaseShape.pt[6165].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6165__pnty.o" "SilverVase1Shape.pt[6165].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6165__pntz.o" "SilverVase:SilverVaseShape.pt[6165].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6165__pntz.o" "SilverVase1Shape.pt[6165].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6166__pntx.o" "SilverVase:SilverVaseShape.pt[6166].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6166__pntx.o" "SilverVase1Shape.pt[6166].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6166__pnty.o" "SilverVase:SilverVaseShape.pt[6166].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6166__pnty.o" "SilverVase1Shape.pt[6166].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6166__pntz.o" "SilverVase:SilverVaseShape.pt[6166].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6166__pntz.o" "SilverVase1Shape.pt[6166].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6167__pntx.o" "SilverVase:SilverVaseShape.pt[6167].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6167__pntx.o" "SilverVase1Shape.pt[6167].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6167__pnty.o" "SilverVase:SilverVaseShape.pt[6167].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6167__pnty.o" "SilverVase1Shape.pt[6167].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6167__pntz.o" "SilverVase:SilverVaseShape.pt[6167].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6167__pntz.o" "SilverVase1Shape.pt[6167].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6168__pntx.o" "SilverVase:SilverVaseShape.pt[6168].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6168__pntx.o" "SilverVase1Shape.pt[6168].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6168__pnty.o" "SilverVase:SilverVaseShape.pt[6168].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6168__pnty.o" "SilverVase1Shape.pt[6168].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6168__pntz.o" "SilverVase:SilverVaseShape.pt[6168].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6168__pntz.o" "SilverVase1Shape.pt[6168].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6169__pntx.o" "SilverVase:SilverVaseShape.pt[6169].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6169__pntx.o" "SilverVase1Shape.pt[6169].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6169__pnty.o" "SilverVase:SilverVaseShape.pt[6169].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6169__pnty.o" "SilverVase1Shape.pt[6169].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6169__pntz.o" "SilverVase:SilverVaseShape.pt[6169].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6169__pntz.o" "SilverVase1Shape.pt[6169].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6170__pntx.o" "SilverVase:SilverVaseShape.pt[6170].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6170__pntx.o" "SilverVase1Shape.pt[6170].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6170__pnty.o" "SilverVase:SilverVaseShape.pt[6170].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6170__pnty.o" "SilverVase1Shape.pt[6170].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6170__pntz.o" "SilverVase:SilverVaseShape.pt[6170].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6170__pntz.o" "SilverVase1Shape.pt[6170].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6171__pntx.o" "SilverVase:SilverVaseShape.pt[6171].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6171__pntx.o" "SilverVase1Shape.pt[6171].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6171__pnty.o" "SilverVase:SilverVaseShape.pt[6171].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6171__pnty.o" "SilverVase1Shape.pt[6171].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6171__pntz.o" "SilverVase:SilverVaseShape.pt[6171].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6171__pntz.o" "SilverVase1Shape.pt[6171].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6172__pntx.o" "SilverVase:SilverVaseShape.pt[6172].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6172__pntx.o" "SilverVase1Shape.pt[6172].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6172__pnty.o" "SilverVase:SilverVaseShape.pt[6172].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6172__pnty.o" "SilverVase1Shape.pt[6172].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6172__pntz.o" "SilverVase:SilverVaseShape.pt[6172].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6172__pntz.o" "SilverVase1Shape.pt[6172].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6173__pntx.o" "SilverVase:SilverVaseShape.pt[6173].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6173__pntx.o" "SilverVase1Shape.pt[6173].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6173__pnty.o" "SilverVase:SilverVaseShape.pt[6173].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6173__pnty.o" "SilverVase1Shape.pt[6173].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6173__pntz.o" "SilverVase:SilverVaseShape.pt[6173].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6173__pntz.o" "SilverVase1Shape.pt[6173].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6174__pntx.o" "SilverVase:SilverVaseShape.pt[6174].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6174__pntx.o" "SilverVase1Shape.pt[6174].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6174__pnty.o" "SilverVase:SilverVaseShape.pt[6174].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6174__pnty.o" "SilverVase1Shape.pt[6174].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6174__pntz.o" "SilverVase:SilverVaseShape.pt[6174].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6174__pntz.o" "SilverVase1Shape.pt[6174].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6175__pntx.o" "SilverVase:SilverVaseShape.pt[6175].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6175__pntx.o" "SilverVase1Shape.pt[6175].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6175__pnty.o" "SilverVase:SilverVaseShape.pt[6175].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6175__pnty.o" "SilverVase1Shape.pt[6175].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6175__pntz.o" "SilverVase:SilverVaseShape.pt[6175].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6175__pntz.o" "SilverVase1Shape.pt[6175].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6176__pntx.o" "SilverVase:SilverVaseShape.pt[6176].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6176__pntx.o" "SilverVase1Shape.pt[6176].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6176__pnty.o" "SilverVase:SilverVaseShape.pt[6176].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6176__pnty.o" "SilverVase1Shape.pt[6176].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6176__pntz.o" "SilverVase:SilverVaseShape.pt[6176].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6176__pntz.o" "SilverVase1Shape.pt[6176].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6177__pntx.o" "SilverVase:SilverVaseShape.pt[6177].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6177__pntx.o" "SilverVase1Shape.pt[6177].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6177__pnty.o" "SilverVase:SilverVaseShape.pt[6177].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6177__pnty.o" "SilverVase1Shape.pt[6177].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6177__pntz.o" "SilverVase:SilverVaseShape.pt[6177].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6177__pntz.o" "SilverVase1Shape.pt[6177].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6178__pntx.o" "SilverVase:SilverVaseShape.pt[6178].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6178__pntx.o" "SilverVase1Shape.pt[6178].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6178__pnty.o" "SilverVase:SilverVaseShape.pt[6178].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6178__pnty.o" "SilverVase1Shape.pt[6178].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6178__pntz.o" "SilverVase:SilverVaseShape.pt[6178].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6178__pntz.o" "SilverVase1Shape.pt[6178].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6179__pntx.o" "SilverVase:SilverVaseShape.pt[6179].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6179__pntx.o" "SilverVase1Shape.pt[6179].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6179__pnty.o" "SilverVase:SilverVaseShape.pt[6179].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6179__pnty.o" "SilverVase1Shape.pt[6179].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6179__pntz.o" "SilverVase:SilverVaseShape.pt[6179].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6179__pntz.o" "SilverVase1Shape.pt[6179].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6180__pntx.o" "SilverVase:SilverVaseShape.pt[6180].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6180__pntx.o" "SilverVase1Shape.pt[6180].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6180__pnty.o" "SilverVase:SilverVaseShape.pt[6180].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6180__pnty.o" "SilverVase1Shape.pt[6180].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6180__pntz.o" "SilverVase:SilverVaseShape.pt[6180].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6180__pntz.o" "SilverVase1Shape.pt[6180].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6181__pntx.o" "SilverVase:SilverVaseShape.pt[6181].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6181__pntx.o" "SilverVase1Shape.pt[6181].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6181__pnty.o" "SilverVase:SilverVaseShape.pt[6181].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6181__pnty.o" "SilverVase1Shape.pt[6181].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6181__pntz.o" "SilverVase:SilverVaseShape.pt[6181].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6181__pntz.o" "SilverVase1Shape.pt[6181].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6182__pntx.o" "SilverVase:SilverVaseShape.pt[6182].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6182__pntx.o" "SilverVase1Shape.pt[6182].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6182__pnty.o" "SilverVase:SilverVaseShape.pt[6182].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6182__pnty.o" "SilverVase1Shape.pt[6182].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6182__pntz.o" "SilverVase:SilverVaseShape.pt[6182].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6182__pntz.o" "SilverVase1Shape.pt[6182].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6183__pntx.o" "SilverVase:SilverVaseShape.pt[6183].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6183__pntx.o" "SilverVase1Shape.pt[6183].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6183__pnty.o" "SilverVase:SilverVaseShape.pt[6183].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6183__pnty.o" "SilverVase1Shape.pt[6183].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6183__pntz.o" "SilverVase:SilverVaseShape.pt[6183].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6183__pntz.o" "SilverVase1Shape.pt[6183].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6184__pntx.o" "SilverVase:SilverVaseShape.pt[6184].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6184__pntx.o" "SilverVase1Shape.pt[6184].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6184__pnty.o" "SilverVase:SilverVaseShape.pt[6184].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6184__pnty.o" "SilverVase1Shape.pt[6184].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6184__pntz.o" "SilverVase:SilverVaseShape.pt[6184].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6184__pntz.o" "SilverVase1Shape.pt[6184].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6185__pntx.o" "SilverVase:SilverVaseShape.pt[6185].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6185__pntx.o" "SilverVase1Shape.pt[6185].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6185__pnty.o" "SilverVase:SilverVaseShape.pt[6185].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6185__pnty.o" "SilverVase1Shape.pt[6185].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6185__pntz.o" "SilverVase:SilverVaseShape.pt[6185].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6185__pntz.o" "SilverVase1Shape.pt[6185].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6186__pntx.o" "SilverVase:SilverVaseShape.pt[6186].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6186__pntx.o" "SilverVase1Shape.pt[6186].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6186__pnty.o" "SilverVase:SilverVaseShape.pt[6186].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6186__pnty.o" "SilverVase1Shape.pt[6186].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6186__pntz.o" "SilverVase:SilverVaseShape.pt[6186].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6186__pntz.o" "SilverVase1Shape.pt[6186].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6187__pntx.o" "SilverVase:SilverVaseShape.pt[6187].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6187__pntx.o" "SilverVase1Shape.pt[6187].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6187__pnty.o" "SilverVase:SilverVaseShape.pt[6187].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6187__pnty.o" "SilverVase1Shape.pt[6187].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6187__pntz.o" "SilverVase:SilverVaseShape.pt[6187].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6187__pntz.o" "SilverVase1Shape.pt[6187].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6188__pntx.o" "SilverVase:SilverVaseShape.pt[6188].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6188__pntx.o" "SilverVase1Shape.pt[6188].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6188__pnty.o" "SilverVase:SilverVaseShape.pt[6188].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6188__pnty.o" "SilverVase1Shape.pt[6188].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6188__pntz.o" "SilverVase:SilverVaseShape.pt[6188].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6188__pntz.o" "SilverVase1Shape.pt[6188].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6189__pntx.o" "SilverVase:SilverVaseShape.pt[6189].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6189__pntx.o" "SilverVase1Shape.pt[6189].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6189__pnty.o" "SilverVase:SilverVaseShape.pt[6189].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6189__pnty.o" "SilverVase1Shape.pt[6189].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6189__pntz.o" "SilverVase:SilverVaseShape.pt[6189].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6189__pntz.o" "SilverVase1Shape.pt[6189].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6190__pntx.o" "SilverVase:SilverVaseShape.pt[6190].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6190__pntx.o" "SilverVase1Shape.pt[6190].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6190__pnty.o" "SilverVase:SilverVaseShape.pt[6190].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6190__pnty.o" "SilverVase1Shape.pt[6190].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6190__pntz.o" "SilverVase:SilverVaseShape.pt[6190].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6190__pntz.o" "SilverVase1Shape.pt[6190].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6191__pntx.o" "SilverVase:SilverVaseShape.pt[6191].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6191__pntx.o" "SilverVase1Shape.pt[6191].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6191__pnty.o" "SilverVase:SilverVaseShape.pt[6191].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6191__pnty.o" "SilverVase1Shape.pt[6191].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6191__pntz.o" "SilverVase:SilverVaseShape.pt[6191].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6191__pntz.o" "SilverVase1Shape.pt[6191].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6192__pntx.o" "SilverVase:SilverVaseShape.pt[6192].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6192__pntx.o" "SilverVase1Shape.pt[6192].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6192__pnty.o" "SilverVase:SilverVaseShape.pt[6192].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6192__pnty.o" "SilverVase1Shape.pt[6192].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6192__pntz.o" "SilverVase:SilverVaseShape.pt[6192].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6192__pntz.o" "SilverVase1Shape.pt[6192].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6193__pntx.o" "SilverVase:SilverVaseShape.pt[6193].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6193__pntx.o" "SilverVase1Shape.pt[6193].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6193__pnty.o" "SilverVase:SilverVaseShape.pt[6193].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6193__pnty.o" "SilverVase1Shape.pt[6193].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6193__pntz.o" "SilverVase:SilverVaseShape.pt[6193].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6193__pntz.o" "SilverVase1Shape.pt[6193].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6194__pntx.o" "SilverVase:SilverVaseShape.pt[6194].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6194__pntx.o" "SilverVase1Shape.pt[6194].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6194__pnty.o" "SilverVase:SilverVaseShape.pt[6194].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6194__pnty.o" "SilverVase1Shape.pt[6194].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6194__pntz.o" "SilverVase:SilverVaseShape.pt[6194].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6194__pntz.o" "SilverVase1Shape.pt[6194].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6195__pntx.o" "SilverVase:SilverVaseShape.pt[6195].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6195__pntx.o" "SilverVase1Shape.pt[6195].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6195__pnty.o" "SilverVase:SilverVaseShape.pt[6195].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6195__pnty.o" "SilverVase1Shape.pt[6195].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6195__pntz.o" "SilverVase:SilverVaseShape.pt[6195].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6195__pntz.o" "SilverVase1Shape.pt[6195].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6196__pntx.o" "SilverVase:SilverVaseShape.pt[6196].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6196__pntx.o" "SilverVase1Shape.pt[6196].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6196__pnty.o" "SilverVase:SilverVaseShape.pt[6196].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6196__pnty.o" "SilverVase1Shape.pt[6196].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6196__pntz.o" "SilverVase:SilverVaseShape.pt[6196].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6196__pntz.o" "SilverVase1Shape.pt[6196].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6197__pntx.o" "SilverVase:SilverVaseShape.pt[6197].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6197__pntx.o" "SilverVase1Shape.pt[6197].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6197__pnty.o" "SilverVase:SilverVaseShape.pt[6197].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6197__pnty.o" "SilverVase1Shape.pt[6197].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6197__pntz.o" "SilverVase:SilverVaseShape.pt[6197].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6197__pntz.o" "SilverVase1Shape.pt[6197].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6198__pntx.o" "SilverVase:SilverVaseShape.pt[6198].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6198__pntx.o" "SilverVase1Shape.pt[6198].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6198__pnty.o" "SilverVase:SilverVaseShape.pt[6198].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6198__pnty.o" "SilverVase1Shape.pt[6198].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6198__pntz.o" "SilverVase:SilverVaseShape.pt[6198].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6198__pntz.o" "SilverVase1Shape.pt[6198].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6199__pntx.o" "SilverVase:SilverVaseShape.pt[6199].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6199__pntx.o" "SilverVase1Shape.pt[6199].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6199__pnty.o" "SilverVase:SilverVaseShape.pt[6199].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6199__pnty.o" "SilverVase1Shape.pt[6199].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6199__pntz.o" "SilverVase:SilverVaseShape.pt[6199].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6199__pntz.o" "SilverVase1Shape.pt[6199].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6200__pntx.o" "SilverVase:SilverVaseShape.pt[6200].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6200__pntx.o" "SilverVase1Shape.pt[6200].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6200__pnty.o" "SilverVase:SilverVaseShape.pt[6200].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6200__pnty.o" "SilverVase1Shape.pt[6200].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6200__pntz.o" "SilverVase:SilverVaseShape.pt[6200].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6200__pntz.o" "SilverVase1Shape.pt[6200].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6201__pntx.o" "SilverVase:SilverVaseShape.pt[6201].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6201__pntx.o" "SilverVase1Shape.pt[6201].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6201__pnty.o" "SilverVase:SilverVaseShape.pt[6201].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6201__pnty.o" "SilverVase1Shape.pt[6201].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6201__pntz.o" "SilverVase:SilverVaseShape.pt[6201].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6201__pntz.o" "SilverVase1Shape.pt[6201].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6202__pntx.o" "SilverVase:SilverVaseShape.pt[6202].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6202__pntx.o" "SilverVase1Shape.pt[6202].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6202__pnty.o" "SilverVase:SilverVaseShape.pt[6202].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6202__pnty.o" "SilverVase1Shape.pt[6202].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6202__pntz.o" "SilverVase:SilverVaseShape.pt[6202].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6202__pntz.o" "SilverVase1Shape.pt[6202].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6203__pntx.o" "SilverVase:SilverVaseShape.pt[6203].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6203__pntx.o" "SilverVase1Shape.pt[6203].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6203__pnty.o" "SilverVase:SilverVaseShape.pt[6203].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6203__pnty.o" "SilverVase1Shape.pt[6203].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6203__pntz.o" "SilverVase:SilverVaseShape.pt[6203].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6203__pntz.o" "SilverVase1Shape.pt[6203].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6204__pntx.o" "SilverVase:SilverVaseShape.pt[6204].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6204__pntx.o" "SilverVase1Shape.pt[6204].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6204__pnty.o" "SilverVase:SilverVaseShape.pt[6204].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6204__pnty.o" "SilverVase1Shape.pt[6204].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6204__pntz.o" "SilverVase:SilverVaseShape.pt[6204].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6204__pntz.o" "SilverVase1Shape.pt[6204].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6205__pntx.o" "SilverVase:SilverVaseShape.pt[6205].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6205__pntx.o" "SilverVase1Shape.pt[6205].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6205__pnty.o" "SilverVase:SilverVaseShape.pt[6205].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6205__pnty.o" "SilverVase1Shape.pt[6205].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6205__pntz.o" "SilverVase:SilverVaseShape.pt[6205].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6205__pntz.o" "SilverVase1Shape.pt[6205].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6206__pntx.o" "SilverVase:SilverVaseShape.pt[6206].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6206__pntx.o" "SilverVase1Shape.pt[6206].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6206__pnty.o" "SilverVase:SilverVaseShape.pt[6206].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6206__pnty.o" "SilverVase1Shape.pt[6206].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6206__pntz.o" "SilverVase:SilverVaseShape.pt[6206].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6206__pntz.o" "SilverVase1Shape.pt[6206].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6207__pntx.o" "SilverVase:SilverVaseShape.pt[6207].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6207__pntx.o" "SilverVase1Shape.pt[6207].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6207__pnty.o" "SilverVase:SilverVaseShape.pt[6207].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6207__pnty.o" "SilverVase1Shape.pt[6207].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6207__pntz.o" "SilverVase:SilverVaseShape.pt[6207].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6207__pntz.o" "SilverVase1Shape.pt[6207].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6208__pntx.o" "SilverVase:SilverVaseShape.pt[6208].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6208__pntx.o" "SilverVase1Shape.pt[6208].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6208__pnty.o" "SilverVase:SilverVaseShape.pt[6208].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6208__pnty.o" "SilverVase1Shape.pt[6208].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6208__pntz.o" "SilverVase:SilverVaseShape.pt[6208].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6208__pntz.o" "SilverVase1Shape.pt[6208].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6209__pntx.o" "SilverVase:SilverVaseShape.pt[6209].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6209__pntx.o" "SilverVase1Shape.pt[6209].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6209__pnty.o" "SilverVase:SilverVaseShape.pt[6209].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6209__pnty.o" "SilverVase1Shape.pt[6209].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6209__pntz.o" "SilverVase:SilverVaseShape.pt[6209].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6209__pntz.o" "SilverVase1Shape.pt[6209].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6210__pntx.o" "SilverVase:SilverVaseShape.pt[6210].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6210__pntx.o" "SilverVase1Shape.pt[6210].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6210__pnty.o" "SilverVase:SilverVaseShape.pt[6210].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6210__pnty.o" "SilverVase1Shape.pt[6210].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6210__pntz.o" "SilverVase:SilverVaseShape.pt[6210].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6210__pntz.o" "SilverVase1Shape.pt[6210].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6211__pntx.o" "SilverVase:SilverVaseShape.pt[6211].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6211__pntx.o" "SilverVase1Shape.pt[6211].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6211__pnty.o" "SilverVase:SilverVaseShape.pt[6211].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6211__pnty.o" "SilverVase1Shape.pt[6211].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6211__pntz.o" "SilverVase:SilverVaseShape.pt[6211].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6211__pntz.o" "SilverVase1Shape.pt[6211].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6212__pntx.o" "SilverVase:SilverVaseShape.pt[6212].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6212__pntx.o" "SilverVase1Shape.pt[6212].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6212__pnty.o" "SilverVase:SilverVaseShape.pt[6212].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6212__pnty.o" "SilverVase1Shape.pt[6212].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6212__pntz.o" "SilverVase:SilverVaseShape.pt[6212].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6212__pntz.o" "SilverVase1Shape.pt[6212].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6213__pntx.o" "SilverVase:SilverVaseShape.pt[6213].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6213__pntx.o" "SilverVase1Shape.pt[6213].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6213__pnty.o" "SilverVase:SilverVaseShape.pt[6213].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6213__pnty.o" "SilverVase1Shape.pt[6213].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6213__pntz.o" "SilverVase:SilverVaseShape.pt[6213].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6213__pntz.o" "SilverVase1Shape.pt[6213].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6214__pntx.o" "SilverVase:SilverVaseShape.pt[6214].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6214__pntx.o" "SilverVase1Shape.pt[6214].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6214__pnty.o" "SilverVase:SilverVaseShape.pt[6214].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6214__pnty.o" "SilverVase1Shape.pt[6214].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6214__pntz.o" "SilverVase:SilverVaseShape.pt[6214].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6214__pntz.o" "SilverVase1Shape.pt[6214].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6215__pntx.o" "SilverVase:SilverVaseShape.pt[6215].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6215__pntx.o" "SilverVase1Shape.pt[6215].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6215__pnty.o" "SilverVase:SilverVaseShape.pt[6215].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6215__pnty.o" "SilverVase1Shape.pt[6215].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6215__pntz.o" "SilverVase:SilverVaseShape.pt[6215].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6215__pntz.o" "SilverVase1Shape.pt[6215].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6216__pntx.o" "SilverVase:SilverVaseShape.pt[6216].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6216__pntx.o" "SilverVase1Shape.pt[6216].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6216__pnty.o" "SilverVase:SilverVaseShape.pt[6216].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6216__pnty.o" "SilverVase1Shape.pt[6216].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6216__pntz.o" "SilverVase:SilverVaseShape.pt[6216].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6216__pntz.o" "SilverVase1Shape.pt[6216].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6217__pntx.o" "SilverVase:SilverVaseShape.pt[6217].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6217__pntx.o" "SilverVase1Shape.pt[6217].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6217__pnty.o" "SilverVase:SilverVaseShape.pt[6217].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6217__pnty.o" "SilverVase1Shape.pt[6217].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6217__pntz.o" "SilverVase:SilverVaseShape.pt[6217].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6217__pntz.o" "SilverVase1Shape.pt[6217].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6218__pntx.o" "SilverVase:SilverVaseShape.pt[6218].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6218__pntx.o" "SilverVase1Shape.pt[6218].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6218__pnty.o" "SilverVase:SilverVaseShape.pt[6218].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6218__pnty.o" "SilverVase1Shape.pt[6218].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6218__pntz.o" "SilverVase:SilverVaseShape.pt[6218].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6218__pntz.o" "SilverVase1Shape.pt[6218].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6219__pntx.o" "SilverVase:SilverVaseShape.pt[6219].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6219__pntx.o" "SilverVase1Shape.pt[6219].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6219__pnty.o" "SilverVase:SilverVaseShape.pt[6219].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6219__pnty.o" "SilverVase1Shape.pt[6219].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6219__pntz.o" "SilverVase:SilverVaseShape.pt[6219].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6219__pntz.o" "SilverVase1Shape.pt[6219].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6220__pntx.o" "SilverVase:SilverVaseShape.pt[6220].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6220__pntx.o" "SilverVase1Shape.pt[6220].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6220__pnty.o" "SilverVase:SilverVaseShape.pt[6220].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6220__pnty.o" "SilverVase1Shape.pt[6220].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6220__pntz.o" "SilverVase:SilverVaseShape.pt[6220].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6220__pntz.o" "SilverVase1Shape.pt[6220].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6221__pntx.o" "SilverVase:SilverVaseShape.pt[6221].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6221__pntx.o" "SilverVase1Shape.pt[6221].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6221__pnty.o" "SilverVase:SilverVaseShape.pt[6221].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6221__pnty.o" "SilverVase1Shape.pt[6221].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6221__pntz.o" "SilverVase:SilverVaseShape.pt[6221].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6221__pntz.o" "SilverVase1Shape.pt[6221].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6222__pntx.o" "SilverVase:SilverVaseShape.pt[6222].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6222__pntx.o" "SilverVase1Shape.pt[6222].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6222__pnty.o" "SilverVase:SilverVaseShape.pt[6222].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6222__pnty.o" "SilverVase1Shape.pt[6222].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6222__pntz.o" "SilverVase:SilverVaseShape.pt[6222].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6222__pntz.o" "SilverVase1Shape.pt[6222].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6223__pntx.o" "SilverVase:SilverVaseShape.pt[6223].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6223__pntx.o" "SilverVase1Shape.pt[6223].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6223__pnty.o" "SilverVase:SilverVaseShape.pt[6223].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6223__pnty.o" "SilverVase1Shape.pt[6223].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6223__pntz.o" "SilverVase:SilverVaseShape.pt[6223].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6223__pntz.o" "SilverVase1Shape.pt[6223].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6224__pntx.o" "SilverVase:SilverVaseShape.pt[6224].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6224__pntx.o" "SilverVase1Shape.pt[6224].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6224__pnty.o" "SilverVase:SilverVaseShape.pt[6224].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6224__pnty.o" "SilverVase1Shape.pt[6224].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6224__pntz.o" "SilverVase:SilverVaseShape.pt[6224].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6224__pntz.o" "SilverVase1Shape.pt[6224].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6225__pntx.o" "SilverVase:SilverVaseShape.pt[6225].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6225__pntx.o" "SilverVase1Shape.pt[6225].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6225__pnty.o" "SilverVase:SilverVaseShape.pt[6225].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6225__pnty.o" "SilverVase1Shape.pt[6225].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6225__pntz.o" "SilverVase:SilverVaseShape.pt[6225].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6225__pntz.o" "SilverVase1Shape.pt[6225].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6226__pntx.o" "SilverVase:SilverVaseShape.pt[6226].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6226__pntx.o" "SilverVase1Shape.pt[6226].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6226__pnty.o" "SilverVase:SilverVaseShape.pt[6226].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6226__pnty.o" "SilverVase1Shape.pt[6226].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6226__pntz.o" "SilverVase:SilverVaseShape.pt[6226].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6226__pntz.o" "SilverVase1Shape.pt[6226].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6227__pntx.o" "SilverVase:SilverVaseShape.pt[6227].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6227__pntx.o" "SilverVase1Shape.pt[6227].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6227__pnty.o" "SilverVase:SilverVaseShape.pt[6227].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6227__pnty.o" "SilverVase1Shape.pt[6227].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6227__pntz.o" "SilverVase:SilverVaseShape.pt[6227].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6227__pntz.o" "SilverVase1Shape.pt[6227].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6228__pntx.o" "SilverVase:SilverVaseShape.pt[6228].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6228__pntx.o" "SilverVase1Shape.pt[6228].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6228__pnty.o" "SilverVase:SilverVaseShape.pt[6228].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6228__pnty.o" "SilverVase1Shape.pt[6228].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6228__pntz.o" "SilverVase:SilverVaseShape.pt[6228].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6228__pntz.o" "SilverVase1Shape.pt[6228].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6229__pntx.o" "SilverVase:SilverVaseShape.pt[6229].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6229__pntx.o" "SilverVase1Shape.pt[6229].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6229__pnty.o" "SilverVase:SilverVaseShape.pt[6229].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6229__pnty.o" "SilverVase1Shape.pt[6229].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6229__pntz.o" "SilverVase:SilverVaseShape.pt[6229].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6229__pntz.o" "SilverVase1Shape.pt[6229].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6230__pntx.o" "SilverVase:SilverVaseShape.pt[6230].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6230__pntx.o" "SilverVase1Shape.pt[6230].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6230__pnty.o" "SilverVase:SilverVaseShape.pt[6230].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6230__pnty.o" "SilverVase1Shape.pt[6230].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6230__pntz.o" "SilverVase:SilverVaseShape.pt[6230].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6230__pntz.o" "SilverVase1Shape.pt[6230].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6231__pntx.o" "SilverVase:SilverVaseShape.pt[6231].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6231__pntx.o" "SilverVase1Shape.pt[6231].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6231__pnty.o" "SilverVase:SilverVaseShape.pt[6231].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6231__pnty.o" "SilverVase1Shape.pt[6231].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6231__pntz.o" "SilverVase:SilverVaseShape.pt[6231].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6231__pntz.o" "SilverVase1Shape.pt[6231].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6232__pntx.o" "SilverVase:SilverVaseShape.pt[6232].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6232__pntx.o" "SilverVase1Shape.pt[6232].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6232__pnty.o" "SilverVase:SilverVaseShape.pt[6232].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6232__pnty.o" "SilverVase1Shape.pt[6232].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6232__pntz.o" "SilverVase:SilverVaseShape.pt[6232].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6232__pntz.o" "SilverVase1Shape.pt[6232].pz"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6233__pntx.o" "SilverVase:SilverVaseShape.pt[6233].px"
+connectAttr "SilverVase:SilverVaseShape_pnts_6233__pntx.o" "SilverVase1Shape.pt[6233].px"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6233__pnty.o" "SilverVase:SilverVaseShape.pt[6233].py"
+connectAttr "SilverVase:SilverVaseShape_pnts_6233__pnty.o" "SilverVase1Shape.pt[6233].py"
 		;
-connectAttr "SilverVase:SilverVaseShape_pnts_6233__pntz.o" "SilverVase:SilverVaseShape.pt[6233].pz"
+connectAttr "SilverVase:SilverVaseShape_pnts_6233__pntz.o" "SilverVase1Shape.pt[6233].pz"
 		;
-connectAttr "SilverVase:groupId1.id" "SilverVase:SilverVaseShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "SilverVase:SilverVaseShape.iog.og[0].gco"
-		;
+connectAttr "SilverVase:groupId1.id" "SilverVase1Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "SilverVase1Shape.iog.og[0].gco";
 connectAttr "WhiteBlueFlower:groupId1.id" "|Flower1|Flower1.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "|Flower1|Flower1.iog.og[0].gco";
 connectAttr "groupId1.id" "|Flower2|Flower2.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "|Flower2|Flower2.iog.og[0].gco";
-connectAttr "polyTweakUV6.out" "pPlaneShape1.i";
-connectAttr "polyTweakUV6.uvtk[0]" "pPlaneShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV6.out" "MansionFloorShape.i";
+connectAttr "polyTweakUV6.uvtk[0]" "MansionFloorShape.uvst[0].uvtw";
+connectAttr "polyTweakUV8.out" "WallShape1.i";
+connectAttr "polyTweakUV8.uvtk[0]" "WallShape1.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Asset1:standardSurface1SG.message" ":defaultLightSet.message";
@@ -33131,19 +33403,19 @@ connectAttr "WhiteBlueFlower:place2dTexture1.vc1" "WhiteBlueFlower:file1.vc1";
 connectAttr "WhiteBlueFlower:place2dTexture1.o" "WhiteBlueFlower:file1.uv";
 connectAttr "WhiteBlueFlower:place2dTexture1.ofs" "WhiteBlueFlower:file1.fs";
 connectAttr "polyPlane1.out" "polyExtrudeFace1.ip";
-connectAttr "pPlaneShape1.wm" "polyExtrudeFace1.mp";
+connectAttr "MansionFloorShape.wm" "polyExtrudeFace1.mp";
 connectAttr "polyExtrudeFace1.out" "polySplitRing1.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing1.mp";
+connectAttr "MansionFloorShape.wm" "polySplitRing1.mp";
 connectAttr "polyTweak1.out" "polySplitRing2.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing2.mp";
+connectAttr "MansionFloorShape.wm" "polySplitRing2.mp";
 connectAttr "polySplitRing1.out" "polyTweak1.ip";
 connectAttr "polySplitRing2.out" "polySplitRing3.ip";
-connectAttr "pPlaneShape1.wm" "polySplitRing3.mp";
+connectAttr "MansionFloorShape.wm" "polySplitRing3.mp";
 connectAttr "polyTweak2.out" "polyExtrudeFace2.ip";
-connectAttr "pPlaneShape1.wm" "polyExtrudeFace2.mp";
+connectAttr "MansionFloorShape.wm" "polyExtrudeFace2.mp";
 connectAttr "polySplitRing3.out" "polyTweak2.ip";
 connectAttr "polyExtrudeFace2.out" "polyExtrudeFace3.ip";
-connectAttr "pPlaneShape1.wm" "polyExtrudeFace3.mp";
+connectAttr "MansionFloorShape.wm" "polyExtrudeFace3.mp";
 connectAttr "polyExtrudeFace3.out" "polyTweakUV1.ip";
 connectAttr "polyTweak3.out" "polyMapCut1.ip";
 connectAttr "polyTweakUV1.out" "polyTweak3.ip";
@@ -33158,6 +33430,21 @@ connectAttr "polyTweakUV4.out" "polyMapCut6.ip";
 connectAttr "polyMapCut6.out" "polyTweakUV5.ip";
 connectAttr "polyTweakUV5.out" "polyMapCut7.ip";
 connectAttr "polyMapCut7.out" "polyTweakUV6.ip";
+connectAttr "polyCube1.out" "polySplitRing4.ip";
+connectAttr "WallShape1.wm" "polySplitRing4.mp";
+connectAttr "polySplitRing4.out" "polyExtrudeFace4.ip";
+connectAttr "WallShape1.wm" "polyExtrudeFace4.mp";
+connectAttr "polyExtrudeFace4.out" "polyTweakUV7.ip";
+connectAttr "polyTweak4.out" "polyMapCut8.ip";
+connectAttr "polyTweakUV7.out" "polyTweak4.ip";
+connectAttr "polyMapCut8.out" "polyMapCut9.ip";
+connectAttr "polyMapCut9.out" "polyMapCut10.ip";
+connectAttr "polyMapCut10.out" "polyMapCut11.ip";
+connectAttr "polyMapCut11.out" "polyMapCut12.ip";
+connectAttr "polyMapCut12.out" "polyMapCut13.ip";
+connectAttr "polyMapCut13.out" "polyMapCut14.ip";
+connectAttr "polyMapCut14.out" "polyMapCut15.ip";
+connectAttr "polyMapCut15.out" "polyTweakUV8.ip";
 connectAttr "Asset1:standardSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "Asset1:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Asset1:place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
@@ -33173,11 +33460,13 @@ connectAttr "SilverVase:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "WhiteBlueFlower:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Asset1:file3.oc" ":standardSurface1.bc";
 connectAttr "Asset1:file1.oc" ":openPBR_shader1.bc";
-connectAttr "SilverVase:SilverVaseShape.iog.og[0]" ":initialShadingGroup.dsm" -na
-		;
+connectAttr "SilverVase1Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "|Flower1|Flower1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "|Flower2|Flower2.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "MansionFloorShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WallShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WallShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WallShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "SilverVase:groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "WhiteBlueFlower:groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
