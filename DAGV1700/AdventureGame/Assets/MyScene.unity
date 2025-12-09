@@ -250,10 +250,10 @@ GameObject:
   m_Component:
   - component: {fileID: 59429965}
   - component: {fileID: 59429964}
+  - component: {fileID: 59429960}
   - component: {fileID: 59429963}
   - component: {fileID: 59429962}
   - component: {fileID: 59429961}
-  - component: {fileID: 59429960}
   - component: {fileID: 59429966}
   m_Layer: 13
   m_Name: Saw
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e78bdf5ed9784e75a92c53169c936b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: {fileID: 11400000, guid: 64c59e812861147a88d9e55a69834e31, type: 2}
+  id: {fileID: 11400000, guid: d41feb6577f9d3047ac8eb7fdae63124, type: 2}
 --- !u!114 &59429962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a8862fefc9a40de8a865b36e083f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: {fileID: 11400000, guid: 64c59e812861147a88d9e55a69834e31, type: 2}
+  id: {fileID: 11400000, guid: d41feb6577f9d3047ac8eb7fdae63124, type: 2}
   matchEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2763,6 +2763,7 @@ GameObject:
   - component: {fileID: 1063144069}
   - component: {fileID: 1063144071}
   - component: {fileID: 1063144070}
+  - component: {fileID: 1063144072}
   m_Layer: 3
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -2827,6 +2828,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: -1, y: 1, z: 0}
+--- !u!114 &1063144072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063144066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9914d55c3075a4b14a80c1204e72e335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key1: 275
+  key2: 276
+  direction1: 0
+  direction2: 180
 --- !u!1001 &1118396323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3012,7 +3029,6 @@ GameObject:
   - component: {fileID: 1176729365}
   - component: {fileID: 1176729366}
   - component: {fileID: 1176729369}
-  - component: {fileID: 1176729370}
   m_Layer: 3
   m_Name: Art
   m_TagString: Untagged
@@ -3125,22 +3141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
---- !u!114 &1176729370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176729363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9914d55c3075a4b14a80c1204e72e335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key1: 275
-  key2: 276
-  direction1: 0
-  direction2: 180
 --- !u!4 &1179156711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5884721662377640645, guid: 3d8ecc24c9acbcd4f97c90fefbd02443, type: 3}
