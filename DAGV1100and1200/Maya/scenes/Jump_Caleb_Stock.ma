@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: AnimationPage_136-166_Starter_Caleb_Stock.ma
-//Last modified: Fri, Apr 17, 2026 06:56:40 PM
+//Name: Jump_Caleb_Stock.ma
+//Last modified: Fri, Apr 17, 2026 06:59:23 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
@@ -19,7 +19,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "39ED970B-42CC-2334-F2E9-E391B2619E11";
+fileInfo "UUID" "9802D19D-42D9-0ED4-C53A-54A0FDAA3240";
 createNode transform -s -n "persp";
 	rename -uid "A99A115B-2B40-A95A-EB94-24A6C71E6B67";
 	setAttr ".v" no;
@@ -4032,4 +4032,4 @@ connectAttr "Beefy_rToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[150]";
 connectAttr "sharedReferenceNode.sr" "Ultimate_Beefy_v1_0_2RN.sr";
 connectAttr ":time1.o" "timeToUnitConversion1.i";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of AnimationPage_136-166_Starter_Caleb_Stock.ma
+// End of Jump_Caleb_Stock.ma
